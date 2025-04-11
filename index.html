@@ -186,11 +186,7 @@
       >
         <!-- Form Side -->
         <div class="p-10">
-          <form
-            action="https://formsubmit.co/kartikeya30062009@gmail.com"
-            method="POST"
-            class="space-y-6"
-          >
+          <form id="contactForm" class="space-y-6">
             <div>
               <input type="hidden" name="_captcha" value="false" />
               <input
@@ -270,6 +266,37 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+
+          // Add hidden fields manually
+          formData.append("_captcha", "false");
+          formData.append("_template", "table");
+
+          fetch("https://formsubmit.co/kartikeya30062009@gmail.com", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              if (response.ok) {
+                window.location.href = "https://kartikeyalab.github.io/thank/";
+              } else {
+                alert(
+                  "There was an error submitting your form. Please try again later."
+                );
+              }
+            })
+            .catch((error) => {
+              console.error("Form submission error:", error);
+              alert("An unexpected error occurred.");
+            });
+        });
     </script>
   </body>
 </html>
