@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Bethasia";
+  src: url(Bethasia.otf);
+}
+
+h2 {
+  font-family: "Bethasia";
+}
+
+h1 {
+  font-family: "Bethasia";
+}
+
+h3 {
+  font-family: "Bethasia";
+}
+::selection {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.121),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-card:hover::before {
+  opacity: 1;
+}
+
+/* Individual card positioning */
+.glow-card {
+  --x: 50%;
+  --y: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.glow-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Add extra padding or adjustments as needed */
+.glow-card {
+  margin-bottom: 20px;
+}
