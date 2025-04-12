@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Bethasia";
+  src: url(Bethasia.otf);
+}
+
+h2 {
+  font-family: "Bethasia";
+}
+
+h1 {
+  font-family: "Bethasia";
+}
+
+h3 {
+  font-family: "Bethasia";
+}
+::selection {
+  background-color: #2563eb;
+  color: #fff;
+}

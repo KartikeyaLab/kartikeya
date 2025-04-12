@@ -13,24 +13,21 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+
     <script
       src="https://kit.fontawesome.com/542131e2b7.js"
       crossorigin="anonymous"
     ></script>
 
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
       body {
-        font-family: "Inter", sans-serif;
+        font-family: "Montserrat", sans-serif;
       }
     </style>
   </head>
   <body class="bg-black text-white">
-    <a
-      href="#contact"
-      class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-500 px-5 py-3 text-white font-medium rounded-full shadow-lg z-50 transition"
-    >
-      Let's Talk
-    </a>
     <header
       class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-zinc-800 shadow-lg"
     >
@@ -61,7 +58,7 @@
       class="flex-grow flex flex-col justify-center items-center text-center px-6"
       style="height: calc(100vh - 4.5rem)"
     >
-      <h2 class="text-5xl md:text-6xl font-bold mb-2 leading-tight">
+      <h2 class="text-6xl md:text-8xl font-bold mb-2 leading-tight">
         Hi, I'm Kartikeya
       </h2>
       <p class="text-zinc-400 text-lg md:text-xl mb-4">
@@ -93,7 +90,7 @@
     </section>
 
     <section id="about" class="px-6 py-24 max-w-3xl mx-auto text-center">
-      <h3 class="text-4xl font-bold mb-4">About Me</h3>
+      <h3 class="text-6xl font-bold mb-4">About Me</h3>
       <p class="text-zinc-500 mb-8 text-base">
         A quick glimpse into who I am and what I love doing.
       </p>
@@ -107,98 +104,19 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="px-6 py-24 max-w-5xl mx-auto">
-      <h3 class="text-4xl font-bold text-center mb-4">Projects</h3>
-      <p class="text-zinc-500 text-center mb-8 text-base">
-        Some of the cool things I've built and worked on recently.
-      </p>
-      <div class="grid gap-10 md:grid-cols-2">
-        <!-- Project Card -->
+    <section id="projects" class="py-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <h3 class="text-4xl font-bold mb-10">Projects</h3>
         <div
-          class="bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all"
-        >
-          <h4 class="text-2xl font-semibold mb-2">
-            Aira - Personal AI Assistant
-          </h4>
-          <p class="text-zinc-400 mb-4">
-            Voice-enabled AI assistant with Telegram integration, app control,
-            and emotional intelligence.
-          </p>
-          <div class="flex flex-wrap gap-2 text-sm mb-4">
-            <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
-              >Python</span
-            >
-            <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
-              >Mistral</span
-            >
-            <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
-              >Edge-TTS</span
-            >
-            <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
-              >Telethon</span
-            >
-          </div>
-          <a
-            href="https://github.com/yourgithub/aira"
-            target="_blank"
-            class="text-blue-400 hover:underline text-sm"
-            >View Project ↗</a
-          >
-          <a
-            href="https://yourdomain.com"
-            target="_blank"
-            class="text-blue-400 hover:underline text-sm"
-            >Live Demo ↗</a
-          >
-        </div>
-
-        <div
-          class="bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all"
-        >
-          <h4 class="text-2xl font-semibold mb-2">Portfolio Website</h4>
-
-          <p class="text-zinc-400 mb-4">
-            Sleek portfolio built with React and TailwindCSS, animated with
-            Framer Motion.
-          </p>
-          <div class="flex flex-wrap gap-2 text-sm mb-4">
-            <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
-              >React</span
-            >
-            <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
-              >TailwindCSS</span
-            >
-            <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
-              >Framer Motion</span
-            >
-          </div>
-          <a
-            href="https://yourdomain.com"
-            target="_blank"
-            class="text-blue-400 hover:underline text-sm"
-            >View Project ↗</a
-          >
-          <a
-            href="https://yourdomain.com"
-            target="_blank"
-            class="text-blue-400 hover:underline text-sm"
-            >Live Demo ↗</a
-          >
-        </div>
+          id="github-projects"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        ></div>
       </div>
     </section>
-
     <!-- Contact -->
     <section id="contact" class="px-6 py-24 max-w-6xl mx-auto">
-      <h3 class="text-4xl font-bold text-center mb-4 text-white">
-        Let’s Work Together
+      <h3 class="text-6xl font-bold text-center mb-4 text-white">
+        Start a Conversation
       </h3>
       <p class="text-zinc-500 text-center mb-8 text-base">
         Have an idea or just want to say hi? Drop me a message below.
@@ -263,13 +181,8 @@
         >
           <div class="max-w-md space-y-6">
             <p class="text-lg leading-relaxed text-zinc-300">
-              We make a living by
-              <span class="text-blue-500 font-semibold italic">what we get</span
-              >,<br />
-              but we create a life through
-              <span class="text-blue-500 font-semibold italic"
-                >what we give</span
-              >.
+              We make a living by what we get, but we create a life through what
+              we give.
             </p>
             <p class="italic">~Winston Churchill</p>
           </div>
@@ -316,6 +229,45 @@
               alert("An unexpected error occurred.");
             });
         });
+
+      const username = "KartikeyaLab";
+      const maxProjects = 6;
+
+      async function loadGitHubProjects() {
+        const container = document.getElementById("github-projects");
+
+        try {
+          const res = await fetch(
+            `https://api.github.com/users/${username}/repos`
+          );
+          const repos = await res.json();
+
+          const filtered = repos
+            .filter((repo) => !repo.fork && repo.description)
+            .slice(0, maxProjects);
+
+          container.innerHTML = filtered
+            .map(
+              (repo) => `
+        <div class="bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all">
+          <h4 class="text-2xl font-semibold mb-2">${repo.name.replace(
+            /-/g,
+            " "
+          )}</h4>
+          <p class="text-zinc-400 mb-4">${repo.description}</p>
+          <a href="${
+            repo.html_url
+          }" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
+        </div>
+      `
+            )
+            .join("");
+        } catch (err) {
+          container.innerHTML = `<p class="text-red-500">Failed to load GitHub projects.</p>`;
+        }
+      }
+
+      loadGitHubProjects();
     </script>
   </body>
 </html>
