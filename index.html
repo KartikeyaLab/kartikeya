@@ -113,7 +113,11 @@
     </section>
 
     <section id="about" class="px-6 py-24 max-w-3xl mx-auto text-center">
-      <h3 class="text-6xl font-bold mb-4">About Me</h3>
+      <h3
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2 sm:mb-4"
+      >
+        About Me
+      </h3>
       <p class="text-zinc-500 mb-8 text-base">
         A quick glimpse into who I am and what I love doing.
       </p>
@@ -130,7 +134,11 @@
 
     <!-- Projects -->
     <section id="projects" class="px-6 py-24 max-w-5xl mx-auto">
-      <h3 class="text-6xl font-bold text-center mb-4">Projects</h3>
+      <h3
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-4"
+      >
+        Projects
+      </h3>
       <p class="text-zinc-500 text-center mb-8 text-base">
         Some of the cool things I've built and worked on recently.
       </p>
@@ -1193,8 +1201,10 @@
 
     <!-- Contact -->
     <section id="contact" class="px-6 py-24 max-w-6xl mx-auto">
-      <h3 class="text-6xl font-bold text-center mb-4 text-white">
-        Start a Conversation
+      <h3
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-4 text-white"
+      >
+        Wanna talk?
       </h3>
       <p class="text-zinc-500 text-center mb-8 text-base">
         Have an idea or just want to say hi? Drop me a message below.
@@ -1308,34 +1318,34 @@
             });
         });
 
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    const glowCards = document.querySelectorAll(".glow-card");
+      document.addEventListener("DOMContentLoaded", () => {
+        const glowCards = document.querySelectorAll(".glow-card");
 
-    glowCards.forEach(card => {
-      let mouseX = 0, mouseY = 0;
-      let currentX = 0, currentY = 0;
+        glowCards.forEach((card) => {
+          let mouseX = 0,
+            mouseY = 0;
+          let currentX = 0,
+            currentY = 0;
 
-      card.addEventListener("mousemove", (e) => {
-        const rect = card.getBoundingClientRect();
-        mouseX = e.clientX - rect.left;
-        mouseY = e.clientY - rect.top;
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            mouseY = e.clientY - rect.top;
+          });
+
+          function animateGlow() {
+            currentX += (mouseX - currentX) * 0.1;
+            currentY += (mouseY - currentY) * 0.1;
+
+            card.style.setProperty("--x", `${currentX}px`);
+            card.style.setProperty("--y", `${currentY}px`);
+
+            requestAnimationFrame(animateGlow);
+          }
+
+          animateGlow();
+        });
       });
-
-      function animateGlow() {
-        currentX += (mouseX - currentX) * 0.1;
-        currentY += (mouseY - currentY) * 0.1;
-
-        card.style.setProperty("--x", `${currentX}px`);
-        card.style.setProperty("--y", `${currentY}px`);
-
-        requestAnimationFrame(animateGlow);
-      }
-
-      animateGlow();
-    });
-  });
-
     </script>
   </body>
 </html>
