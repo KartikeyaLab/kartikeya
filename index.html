@@ -1308,32 +1308,34 @@
             });
         });
 
-      const glowCards = document.querySelectorAll(".glow-card");
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const glowCards = document.querySelectorAll(".glow-card");
 
-      glowCards.forEach((card) => {
-        let mouseX = 0,
-          mouseY = 0;
-        let currentX = 0,
-          currentY = 0;
+    glowCards.forEach(card => {
+      let mouseX = 0, mouseY = 0;
+      let currentX = 0, currentY = 0;
 
-        card.addEventListener("mousemove", (e) => {
-          const rect = card.getBoundingClientRect();
-          mouseX = e.clientX - rect.left;
-          mouseY = e.clientY - rect.top;
-        });
-
-        function animateGlow() {
-          currentX += (mouseX - currentX) * 0.1;
-          currentY += (mouseY - currentY) * 0.1;
-
-          card.style.setProperty("--x", `${currentX}px`);
-          card.style.setProperty("--y", `${currentY}px`);
-
-          requestAnimationFrame(animateGlow);
-        }
-
-        animateGlow();
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        mouseX = e.clientX - rect.left;
+        mouseY = e.clientY - rect.top;
       });
+
+      function animateGlow() {
+        currentX += (mouseX - currentX) * 0.1;
+        currentY += (mouseY - currentY) * 0.1;
+
+        card.style.setProperty("--x", `${currentX}px`);
+        card.style.setProperty("--y", `${currentY}px`);
+
+        requestAnimationFrame(animateGlow);
+      }
+
+      animateGlow();
+    });
+  });
+
     </script>
   </body>
 </html>
