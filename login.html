@@ -481,10 +481,8 @@
             },
             body: JSON.stringify({ data }),
           });
-
-          console.log("✅ Data sent to SheetDB:", data);
         } catch (error) {
-          console.error("❌ Error sending data to SheetDB:", error);
+          console.error("Error sending data to SheetDB:", error);
         }
       }
 
