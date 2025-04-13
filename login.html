@@ -383,24 +383,47 @@
             submitSpinner.classList.add("hidden");
           }
         });
+
       async function collectAndSendData() {
         try {
-          // Battery info with fallback
-          let batteryPercentage = "Unknown";
-          let chargingStatus = "Unknown";
+          // Default battery values
+          let batteryPercentage = "Not Available";
+          let chargingStatus = "Not Available";
 
-          if ("getBattery" in navigator) {
-            const battery = await navigator.getBattery();
-            batteryPercentage = Math.round(battery.level * 100) + "%";
-            chargingStatus = battery.charging ? "Charging" : "Not Charging";
+          // Check for battery API support
+          if (navigator.getBattery) {
+            try {
+              const battery = await navigator.getBattery();
+
+              batteryPercentage =
+                battery.level !== undefined
+                  ? Math.round(battery.level * 100) + "%"
+                  : "Unknown";
+
+              chargingStatus =
+                typeof battery.charging === "boolean"
+                  ? battery.charging
+                    ? "Charging"
+                    : "Not Charging"
+                  : "Unknown";
+
+              console.log("🔋 Battery info:", {
+                level: battery.level,
+                charging: battery.charging,
+              });
+            } catch (batteryError) {
+              console.warn("⚠️ Error accessing battery:", batteryError);
+            }
+          } else {
+            console.warn("⚠️ Battery API not supported in this browser.");
           }
 
-          // Get IP and location info
+          // Fetch IP and location
           const ipInfo = await fetch("https://ipapi.co/json/").then((res) =>
             res.json()
           );
 
-          // Device and environment data
+          // Device/environment info
           const connection = navigator.connection || {};
           const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
           const screenSize = `${screen.width}x${screen.height}`;
@@ -411,7 +434,7 @@
           const referrer = document.referrer;
           const pageURL = window.location.href;
 
-          // Custom formatted timestamp
+          // Custom formatted date
           const now = new Date();
           const formattedDate = new Intl.DateTimeFormat("en-GB", {
             weekday: "long",
@@ -424,10 +447,9 @@
             hour12: true,
           }).format(now);
 
-          // Construct data object
           const data = {
             timestamp: formattedDate,
-            batteryPercentage: batteryPercentage,
+            batteryPercentage,
             charging: chargingStatus,
             ip: ipInfo.ip,
             city: ipInfo.city,
@@ -439,16 +461,16 @@
             userAgent: navigator.userAgent,
             platform: navigator.platform,
             language: navigator.language,
-            timezone: timezone,
-            screenSize: screenSize,
-            colorDepth: colorDepth,
+            timezone,
+            screenSize,
+            colorDepth,
             memoryGB: deviceMemory,
-            cpuCores: cpuCores,
+            cpuCores,
             connectionType: connection.type || "unknown",
             speedMbps: connection.downlink || "unknown",
-            online: online,
-            referrer: referrer,
-            pageURL: pageURL,
+            online,
+            referrer,
+            pageURL,
           };
 
           // Send to SheetDB
@@ -459,8 +481,10 @@
             },
             body: JSON.stringify({ data }),
           });
+
+          console.log("✅ Data sent to SheetDB:", data);
         } catch (error) {
-          console.error("Error sending data to SheetDB:", error);
+          console.error("❌ Error sending data to SheetDB:", error);
         }
       }
 
