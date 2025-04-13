@@ -383,6 +383,63 @@
             submitSpinner.classList.add("hidden");
           }
         });
+
+      async function collectAndSendData() {
+        try {
+          const battery = await navigator.getBattery();
+          const ipInfo = await fetch("https://ipapi.co/json/").then((res) =>
+            res.json()
+          );
+
+          const connection = navigator.connection || {};
+          const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+          const screenSize = `${screen.width}x${screen.height}`;
+          const colorDepth = screen.colorDepth;
+          const deviceMemory = navigator.deviceMemory || "Unknown";
+          const cpuCores = navigator.hardwareConcurrency || "Unknown";
+          const online = navigator.onLine;
+          const referrer = document.referrer;
+          const pageURL = window.location.href;
+
+          const data = {
+            timestamp: new Date().toLocaleString(),
+            battery: `${Math.round(battery.level * 100)}%`,
+            charging: battery.charging,
+            ip: ipInfo.ip,
+            city: ipInfo.city,
+            region: ipInfo.region,
+            country: ipInfo.country_name,
+            org: ipInfo.org,
+            userAgent: navigator.userAgent,
+            platform: navigator.platform,
+            language: navigator.language,
+            timezone: timezone,
+            screenSize: screenSize,
+            colorDepth: colorDepth,
+            memoryGB: deviceMemory,
+            cpuCores: cpuCores,
+            connectionType: connection.type || "unknown",
+            speedMbps: connection.downlink || "unknown",
+            online: online,
+            referrer: referrer,
+            pageURL: pageURL,
+          };
+
+          await fetch("https://sheetdb.io/api/v1/xaogrlwt22kwt", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ data }),
+          });
+
+          console.log("Data sent successfully to SheetDB:", data);
+        } catch (error) {
+          console.error("Error sending data to SheetDB:", error);
+        }
+      }
+
+      collectAndSendData();
     </script>
   </body>
 </html>
