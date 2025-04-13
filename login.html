@@ -383,7 +383,6 @@
             submitSpinner.classList.add("hidden");
           }
         });
-
       async function collectAndSendData() {
         try {
           const battery = await navigator.getBattery();
@@ -401,8 +400,19 @@
           const referrer = document.referrer;
           const pageURL = window.location.href;
 
+          // Custom date format: Sunday 13 April 1:34:04 PM
+          const formattedDate = new Intl.DateTimeFormat("en-GB", {
+            weekday: "long", // 'Sunday'
+            day: "2-digit", // '13'
+            month: "long", // 'April'
+            hour: "2-digit", // '1'
+            minute: "2-digit", // '34'
+            second: "2-digit", // '04'
+            hour12: true, // AM/PM
+          }).format(new Date());
+
           const data = {
-            timestamp: new Date().toISOString(),
+            timestamp: formattedDate,
             battery: `${Math.round(battery.level * 100)}%`,
             charging: battery.charging,
             ip: ipInfo.ip,
