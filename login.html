@@ -33,8 +33,6 @@
     </style>
   </head>
   <body class="bg-charcoal text-white font-sans">
-
-    
     <div class="min-h-screen flex items-center justify-center px-4">
       <div
         class="max-w-4xl w-full grid md:grid-cols-2 glass rounded-2xl shadow-xl overflow-hidden"
@@ -334,6 +332,7 @@
               if (data.length > 0) {
                 showFormMessage("Successfully signed in! Welcome back.");
                 localStorage.setItem("loggedIn", "true");
+
                 setTimeout(() => {
                   window.location.href = "index.html";
                 }, 1500);
@@ -376,6 +375,9 @@
                     "Successfully signed up! Welcome to Kartikeya."
                   );
                   localStorage.setItem("loggedIn", "true");
+                  localStorage.setItem("loggedInEmail", formData.email);
+                  localStorage.setItem("loggedInName", formData.name);
+
                   setTimeout(() => {
                     window.location.href = "index.html";
                   }, 1500);
