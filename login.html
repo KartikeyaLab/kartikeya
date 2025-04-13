@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkAuth</title>
+    <!-- Using TailwindCSS CDN for development only -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              charcoal: "#121212",
+              dark: "#1e1e1e",
+              accent: "#3b82f6",
+              purpleAccent: "#fff",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass {
+        background: rgba(30, 30, 30, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-charcoal text-white font-sans">
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <div
+        class="max-w-4xl w-full grid md:grid-cols-2 glass rounded-2xl shadow-xl overflow-hidden"
+      >
+        <!-- Form Section -->
+        <div class="p-10 transition-all duration-500" id="form-container">
+          <h2 class="text-3xl font-bold mb-6" id="form-title">Welcome back</h2>
+          <p class="text-gray-400 mb-6" id="form-description">
+            Sign in to access your account
+          </p>
+
+          <!-- Success/Error Message -->
+          <div
+            id="form-message"
+            class="hidden mb-6 p-4 rounded-lg border text-sm flex items-center space-x-2 transition-all duration-300"
+          >
+            <svg
+              id="form-message-icon"
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            <span id="form-message-text">Success! You are now signed in.</span>
+          </div>
+
+          <!-- Authentication Form -->
+          <form id="auth-form" class="space-y-6">
+            <!-- Name field (only for signup) -->
+            <div id="name-field" class="hidden">
+              <label class="block text-sm mb-1">Name</label>
+              <input
+                type="text"
+                id="name"
+                class="w-full px-4 py-2 rounded-lg bg-dark border border-gray-700 text-white placeholder-gray-500"
+                placeholder="Your name"
+              />
+              <p class="mt-1 text-sm text-red-500 hidden" id="name-error">
+                Please enter your name.
+              </p>
+            </div>
+            <!-- Email field -->
+            <div>
+              <label class="block text-sm mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="w-full px-4 py-2 rounded-lg bg-dark border border-gray-700 text-white placeholder-gray-500"
+                placeholder="name@example.com"
+              />
+              <p class="mt-1 text-sm text-red-500 hidden" id="email-error">
+                Please enter a valid email.
+              </p>
+            </div>
+            <!-- Password field -->
+            <div>
+              <label class="block text-sm mb-1">Password</label>
+              <div class="relative">
+                <input
+                  type="password"
+                  id="password"
+                  class="w-full px-4 py-2 rounded-lg bg-dark border border-gray-700 text-white placeholder-gray-500"
+                  placeholder="Enter your password"
+                />
+                <button
+                  type="button"
+                  onclick="togglePassword()"
+                  class="absolute right-3 top-2.5 text-sm text-gray-400"
+                >
+                  👁️
+                </button>
+              </div>
+              <p class="mt-1 text-sm text-red-500 hidden" id="password-error">
+                Please enter your password.
+              </p>
+            </div>
+            <!-- Remember me and forgot password -->
+            <div
+              class="flex items-center justify-between text-sm text-gray-400"
+            >
+              <label class="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  class="form-checkbox bg-gray-700 border-none"
+                />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="hover:underline">Forgot password?</a>
+            </div>
+            <!-- Submit button -->
+            <button
+              type="submit"
+              class="w-full bg-accent hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition"
+            >
+              Sign in →
+            </button>
+          </form>
+
+          <!-- Toggle link -->
+          <p class="text-sm text-gray-500 mt-6" id="toggle-text">
+            Don’t have an account?
+            <a
+              href="#"
+              onclick="toggleAuthMode()"
+              class="text-purpleAccent hover:underline"
+              >Sign up</a
+            >
+          </p>
+        </div>
+
+        <!-- Info Section -->
+        <div
+          class="bg-dark p-10 flex flex-col justify-center text-center md:text-left"
+        >
+          <h2 class="text-2xl font-bold mb-4">
+            Hit Start on Something Awesome – Sign Up!
+          </h2>
+          <p class="text-gray-400 mb-6">
+            Create an account to unlock personalized features and enjoy the best
+            experience.
+          </p>
+          <p class="text-gray-500 text-sm">
+            © 2025 Kartikeya. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Toggle between Login and Signup modes
+      let isLogin = true;
+      function toggleAuthMode() {
+        isLogin = !isLogin;
+        document.getElementById("form-title").textContent = isLogin
+          ? "Welcome back"
+          : "Create an account";
+        document.getElementById("form-description").textContent = isLogin
+          ? "Sign in to access your account"
+          : "Sign up to get started";
+        document.querySelector("#auth-form button").textContent = isLogin
+          ? "Sign in →"
+          : "Sign up →";
+        document.getElementById("toggle-text").innerHTML = isLogin
+          ? `Don’t have an account? <a href="#" onclick="toggleAuthMode()" class="text-purpleAccent hover:underline">Sign up</a>`
+          : `Already have an account? <a href="#" onclick="toggleAuthMode()" class="text-purpleAccent hover:underline">Sign in</a>`;
+        document
+          .getElementById("name-field")
+          .classList.toggle("hidden", isLogin);
+        clearErrors();
+        hideFormMessage();
+      }
+
+      // Toggle password visibility
+      function togglePassword() {
+        const pwd = document.getElementById("password");
+        pwd.type = pwd.type === "password" ? "text" : "password";
+      }
+
+      // Show/hide errors
+      function showError(id, show) {
+        document.getElementById(id).classList.toggle("hidden", !show);
+      }
+      function clearErrors() {
+        showError("name-error", false);
+        showError("email-error", false);
+        showError("password-error", false);
+      }
+
+      // Show feedback message
+      function showFormMessage(message, isError = false) {
+        const formMessage = document.getElementById("form-message");
+        const messageText = document.getElementById("form-message-text");
+        const messageIcon = document.getElementById("form-message-icon");
+        messageText.textContent = message;
+        // Reset classes for message display
+        formMessage.classList.remove(
+          "hidden",
+          "opacity-0",
+          "bg-green-800/30",
+          "border-green-700",
+          "text-green-300",
+          "bg-red-800/30",
+          "border-red-700",
+          "text-red-300"
+        );
+        messageIcon.classList.remove("text-green-400", "text-red-400");
+        if (isError) {
+          formMessage.classList.add(
+            "bg-red-800/30",
+            "border-red-700",
+            "text-red-300"
+          );
+          messageIcon.classList.add("text-red-400");
+          messageIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />`;
+        } else {
+          formMessage.classList.add(
+            "bg-green-800/30",
+            "border-green-700",
+            "text-green-300"
+          );
+          messageIcon.classList.add("text-green-400");
+          messageIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />`;
+        }
+        formMessage.classList.add("opacity-100");
+      }
+      function hideFormMessage() {
+        document.getElementById("form-message").classList.add("hidden");
+      }
+
+      // Handle form submission
+      document
+        .getElementById("auth-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          clearErrors();
+          hideFormMessage();
+
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value.trim();
+
+          if (!email) {
+            showError("email-error", true);
+            return;
+          }
+          if (!password) {
+            showError("password-error", true);
+            return;
+          }
+
+          // For signup mode, check the name field
+          let formData = { email, password };
+          if (!isLogin) {
+            const name = document.getElementById("name").value.trim();
+            if (!name) {
+              showError("name-error", true);
+              return;
+            }
+            formData.name = name;
+          }
+
+          try {
+            if (isLogin) {
+              // --- Login Flow ---
+              const apiUrl = "https://sheetdb.io/api/v1/xaogrlwt22kwt/search";
+              const res = await fetch(
+                `${apiUrl}?email=${encodeURIComponent(
+                  formData.email
+                )}&password=${encodeURIComponent(formData.password)}`,
+                {
+                  method: "GET",
+                  headers: { "Content-Type": "application/json" },
+                }
+              );
+              if (!res.ok) throw new Error("Invalid response");
+              const data = await res.json();
+              if (data.length > 0) {
+                showFormMessage("Successfully signed in! Welcome back.");
+                localStorage.setItem("loggedIn", "true");
+                setTimeout(() => {
+                  window.location.href = "index.html"; // Redirect to index.html after login
+                }, 1500);
+              } else {
+                showFormMessage("Invalid email or password.", true);
+              }
+            } else {
+              // --- Signup Flow ---
+              // Check if the email already exists
+              const searchUrl =
+                "https://sheetdb.io/api/v1/xaogrlwt22kwt/search";
+              const checkRes = await fetch(
+                `${searchUrl}?email=${encodeURIComponent(formData.email)}`,
+                {
+                  method: "GET",
+                  headers: { "Content-Type": "application/json" },
+                }
+              );
+              if (!checkRes.ok)
+                throw new Error("Failed to check existing user");
+              const existingUsers = await checkRes.json();
+              if (existingUsers.length > 0) {
+                showFormMessage(
+                  "An account with this email already exists.",
+                  true
+                );
+              } else {
+                // No duplicate found, create new account using POST
+                const postRes = await fetch(
+                  "https://sheetdb.io/api/v1/xaogrlwt22kwt",
+                  {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify([formData]),
+                  }
+                );
+                if (!postRes.ok) throw new Error("Error creating account");
+                const postData = await postRes.json();
+                // SheetDB POST returns an object like { created: 1 }
+                if (postData && postData.created == 1) {
+                  showFormMessage(
+                    "Successfully signed up! Welcome to Kartikeya."
+                  );
+                  localStorage.setItem("loggedIn", "true");
+                  setTimeout(() => {
+                    window.location.href = "index.html"; // Redirect after signup
+                  }, 1500);
+                } else {
+                  showFormMessage("Error signing up. Try again.", true);
+                }
+              }
+            }
+          } catch (error) {
+            console.error("Error during API request:", error);
+            showFormMessage("Network error. Please try again later.", true);
+          }
+        });
+    </script>
+  </body>
+</html>
