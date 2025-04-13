@@ -402,7 +402,7 @@
           const pageURL = window.location.href;
 
           const data = {
-            timestamp: new Date().toLocaleString(),
+            timestamp: new Date().toISOString(),
             battery: `${Math.round(battery.level * 100)}%`,
             charging: battery.charging,
             ip: ipInfo.ip,
