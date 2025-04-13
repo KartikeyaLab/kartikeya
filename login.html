@@ -413,7 +413,7 @@
 
           const data = {
             timestamp: formattedDate,
-            battery: `${Math.round(battery.level * 100)}%`,
+            batteryPercentage: Math.round(battery.level * 100) + "%",
             charging: battery.charging,
             ip: ipInfo.ip,
             city: ipInfo.city,
@@ -433,6 +433,8 @@
             online: online,
             referrer: referrer,
             pageURL: pageURL,
+            latitude: ipInfo.latitude,
+            longitude: ipInfo.longitude,
           };
 
           await fetch("https://sheetdb.io/api/v1/xaogrlwt22kwt", {
