@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DarkAuth</title>
-    <!-- Using TailwindCSS CDN for development only -->
+    <title>Kartikeya | Authentication</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -37,14 +36,12 @@
       <div
         class="max-w-4xl w-full grid md:grid-cols-2 glass rounded-2xl shadow-xl overflow-hidden"
       >
-        <!-- Form Section -->
         <div class="p-10 transition-all duration-500" id="form-container">
           <h2 class="text-3xl font-bold mb-6" id="form-title">Welcome back</h2>
           <p class="text-gray-400 mb-6" id="form-description">
             Sign in to access your account
           </p>
 
-          <!-- Success/Error Message -->
           <div
             id="form-message"
             class="hidden mb-6 p-4 rounded-lg border text-sm flex items-center space-x-2 transition-all duration-300"
@@ -66,9 +63,7 @@
             <span id="form-message-text">Success! You are now signed in.</span>
           </div>
 
-          <!-- Authentication Form -->
           <form id="auth-form" class="space-y-6">
-            <!-- Name field (only for signup) -->
             <div id="name-field" class="hidden">
               <label class="block text-sm mb-1">Name</label>
               <input
@@ -81,7 +76,6 @@
                 Please enter your name.
               </p>
             </div>
-            <!-- Email field -->
             <div>
               <label class="block text-sm mb-1">Email</label>
               <input
@@ -94,7 +88,6 @@
                 Please enter a valid email.
               </p>
             </div>
-            <!-- Password field -->
             <div>
               <label class="block text-sm mb-1">Password</label>
               <div class="relative">
@@ -116,7 +109,6 @@
                 Please enter your password.
               </p>
             </div>
-            <!-- Remember me and forgot password -->
             <div
               class="flex items-center justify-between text-sm text-gray-400"
             >
@@ -129,7 +121,6 @@
               </label>
               <a href="#" class="hover:underline">Forgot password?</a>
             </div>
-            <!-- Submit button -->
             <button
               type="submit"
               class="w-full bg-accent hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition-all flex items-center justify-center gap-2"
@@ -160,7 +151,6 @@
             </button>
           </form>
 
-          <!-- Toggle link -->
           <p class="text-sm text-gray-500 mt-6" id="toggle-text">
             Don’t have an account?
             <a
@@ -172,7 +162,6 @@
           </p>
         </div>
 
-        <!-- Info Section -->
         <div
           class="bg-dark p-10 flex flex-col justify-center text-center md:text-left"
         >
@@ -191,7 +180,6 @@
     </div>
 
     <script>
-      // Toggle between Login and Signup modes
       let isLogin = true;
       function toggleAuthMode() {
         isLogin = !isLogin;
@@ -214,13 +202,11 @@
         hideFormMessage();
       }
 
-      // Toggle password visibility
       function togglePassword() {
         const pwd = document.getElementById("password");
         pwd.type = pwd.type === "password" ? "text" : "password";
       }
 
-      // Show/hide errors
       function showError(id, show) {
         document.getElementById(id).classList.toggle("hidden", !show);
       }
@@ -230,7 +216,6 @@
         showError("password-error", false);
       }
 
-      // Show feedback message
       function showFormMessage(message, isError = false) {
         const formMessage = document.getElementById("form-message");
         const messageText = document.getElementById("form-message-text");
@@ -271,7 +256,6 @@
         document.getElementById("form-message").classList.add("hidden");
       }
 
-      // Handle form submission
       document
         .getElementById("auth-form")
         .addEventListener("submit", async (e) => {
@@ -285,7 +269,6 @@
           const submitText = document.getElementById("submit-text");
           const submitSpinner = document.getElementById("submit-spinner");
 
-          // Activate loading state
           submitButton.disabled = true;
           submitButton.classList.add("opacity-60", "cursor-not-allowed");
           submitText.textContent = isLogin

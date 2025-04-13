@@ -1,5 +1,4 @@
 <!-- Stuff I Cooked Up – Kartikeya’s Portfolio -->
-<!-- 11 April 2025 -->
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -28,14 +27,12 @@
     </style>
   </head>
   <script>
-    // Redirect to login if not signed in, using the same key "loggedIn"
     if (localStorage.getItem("loggedIn") !== "true") {
       window.location.href = "login.html";
     }
   </script>
 
   <body class="bg-black text-white">
-    <!-- Nav bar Starts -->
     <nav>
       <div class="wrapper">
         <div class="logo">
@@ -80,7 +77,6 @@
         ></label>
       </div>
     </nav>
-    <!-- Nav bar Ends -->
     <section
       class="flex-grow flex flex-col justify-center items-center text-center px-6"
       style="height: calc(100vh - 4.5rem)"
@@ -140,17 +136,18 @@
         A quick glimpse into who I am and what I love doing.
       </p>
       <p class="text-zinc-400 text-lg leading-relaxed">
-        My name is Kartikeya. I am a computer programmer with a strong interest
-        in technology because I find its possibilities exciting. I specialize in
-        web development, proficient in HTML, CSS, JavaScript, React, C, and
-        Python. Beyond programming, I also have experience as a video editor and
-        graphic designer, where I create visually compelling content.
-        Additionally, I possess excellent typing skills, with a typing speed of
-        up to 160 words per minute.
+        My name is Kartikeya, and I am a technology enthusiast and computer
+        programmer with a focus on creating efficient, user-centered digital
+        solutions. I specialize in web development and have strong command over
+        HTML, CSS, JavaScript, React, C, and Python, along with a working
+        knowledge of C++, C#, and Java. My background also includes experience
+        in video editing and graphic design, allowing me to combine technical
+        functionality with visual impact. Additionally, I bring excellent typing
+        proficiency, with a speed of up to 160 words per minute, enabling fast
+        and precise execution in development workflows.
       </p>
     </section>
 
-    <!-- Projects -->
     <section id="projects" class="px-6 py-24 max-w-5xl mx-auto">
       <h3
         class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-4"
@@ -161,8 +158,6 @@
         Some of the cool things I've built and worked on recently.
       </p>
       <div class="grid gap-10 md:grid-cols-2">
-        <!-- Project Card -->
-
         <!-- Put code here -->
 
         <div
@@ -1437,7 +1432,6 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="px-6 py-24 max-w-6xl mx-auto">
       <h3
         class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-4 text-white"
@@ -1518,7 +1512,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer
       class="text-center py-6 text-zinc-600 text-sm border-t border-zinc-800"
     >
@@ -1593,15 +1586,12 @@
       }
 
       window.onload = function () {
-        // Check if the user is logged in
         const loggedIn = localStorage.getItem("loggedIn");
 
         if (loggedIn === "true") {
-          // Get the name and email from localStorage
           const loggedInName = localStorage.getItem("loggedInName");
           const loggedInEmail = localStorage.getItem("loggedInEmail");
 
-          // Autofill the form
           if (loggedInName && loggedInEmail) {
             document.getElementById("name").value = loggedInName;
             document.getElementById("email").value = loggedInEmail;
