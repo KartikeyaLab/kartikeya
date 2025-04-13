@@ -33,6 +33,8 @@
     </style>
   </head>
   <body class="bg-charcoal text-white font-sans">
+
+    
     <div class="min-h-screen flex items-center justify-center px-4">
       <div
         class="max-w-4xl w-full grid md:grid-cols-2 glass rounded-2xl shadow-xl overflow-hidden"
@@ -132,9 +134,31 @@
             <!-- Submit button -->
             <button
               type="submit"
-              class="w-full bg-accent hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition"
+              class="w-full bg-accent hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition-all flex items-center justify-center gap-2"
+              id="submit-button"
             >
-              Sign in →
+              <span id="submit-text">Sign in →</span>
+              <svg
+                id="submit-spinner"
+                class="hidden animate-spin h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v8H4z"
+                ></path>
+              </svg>
             </button>
           </form>
 
@@ -179,7 +203,7 @@
         document.getElementById("form-description").textContent = isLogin
           ? "Sign in to access your account"
           : "Sign up to get started";
-        document.querySelector("#auth-form button").textContent = isLogin
+        document.getElementById("submit-text").textContent = isLogin
           ? "Sign in →"
           : "Sign up →";
         document.getElementById("toggle-text").innerHTML = isLogin
@@ -214,7 +238,6 @@
         const messageText = document.getElementById("form-message-text");
         const messageIcon = document.getElementById("form-message-icon");
         messageText.textContent = message;
-        // Reset classes for message display
         formMessage.classList.remove(
           "hidden",
           "opacity-0",
@@ -245,6 +268,7 @@
         }
         formMessage.classList.add("opacity-100");
       }
+
       function hideFormMessage() {
         document.getElementById("form-message").classList.add("hidden");
       }
@@ -259,22 +283,35 @@
 
           const email = document.getElementById("email").value.trim();
           const password = document.getElementById("password").value.trim();
+          const submitButton = document.getElementById("submit-button");
+          const submitText = document.getElementById("submit-text");
+          const submitSpinner = document.getElementById("submit-spinner");
+
+          // Activate loading state
+          submitButton.disabled = true;
+          submitButton.classList.add("opacity-60", "cursor-not-allowed");
+          submitText.textContent = isLogin
+            ? "Signing in..."
+            : "Signing you up...";
+          submitSpinner.classList.remove("hidden");
 
           if (!email) {
             showError("email-error", true);
+            resetButton();
             return;
           }
           if (!password) {
             showError("password-error", true);
+            resetButton();
             return;
           }
 
-          // For signup mode, check the name field
           let formData = { email, password };
           if (!isLogin) {
             const name = document.getElementById("name").value.trim();
             if (!name) {
               showError("name-error", true);
+              resetButton();
               return;
             }
             formData.name = name;
@@ -282,7 +319,6 @@
 
           try {
             if (isLogin) {
-              // --- Login Flow ---
               const apiUrl = "https://sheetdb.io/api/v1/xaogrlwt22kwt/search";
               const res = await fetch(
                 `${apiUrl}?email=${encodeURIComponent(
@@ -299,14 +335,13 @@
                 showFormMessage("Successfully signed in! Welcome back.");
                 localStorage.setItem("loggedIn", "true");
                 setTimeout(() => {
-                  window.location.href = "index.html"; // Redirect to index.html after login
+                  window.location.href = "index.html";
                 }, 1500);
               } else {
                 showFormMessage("Invalid email or password.", true);
+                resetButton();
               }
             } else {
-              // --- Signup Flow ---
-              // Check if the email already exists
               const searchUrl =
                 "https://sheetdb.io/api/v1/xaogrlwt22kwt/search";
               const checkRes = await fetch(
@@ -324,8 +359,8 @@
                   "An account with this email already exists.",
                   true
                 );
+                resetButton();
               } else {
-                // No duplicate found, create new account using POST
                 const postRes = await fetch(
                   "https://sheetdb.io/api/v1/xaogrlwt22kwt",
                   {
@@ -336,23 +371,31 @@
                 );
                 if (!postRes.ok) throw new Error("Error creating account");
                 const postData = await postRes.json();
-                // SheetDB POST returns an object like { created: 1 }
                 if (postData && postData.created == 1) {
                   showFormMessage(
                     "Successfully signed up! Welcome to Kartikeya."
                   );
                   localStorage.setItem("loggedIn", "true");
                   setTimeout(() => {
-                    window.location.href = "index.html"; // Redirect after signup
+                    window.location.href = "index.html";
                   }, 1500);
                 } else {
                   showFormMessage("Error signing up. Try again.", true);
+                  resetButton();
                 }
               }
             }
           } catch (error) {
             console.error("Error during API request:", error);
             showFormMessage("Network error. Please try again later.", true);
+            resetButton();
+          }
+
+          function resetButton() {
+            submitButton.disabled = false;
+            submitButton.classList.remove("opacity-60", "cursor-not-allowed");
+            submitText.textContent = isLogin ? "Sign in →" : "Sign up →";
+            submitSpinner.classList.add("hidden");
           }
         });
     </script>

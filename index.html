@@ -35,41 +35,52 @@
   </script>
 
   <body class="bg-black text-white">
-    <header
-      class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-zinc-800 shadow-lg"
-    >
-      <div
-        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
-      >
-        <h1 class="text-3xl font-bold text-white tracking-tight">Kartikeya</h1>
+    <!-- Nav bar Starts -->
+    <nav>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#">Kartikeya</a>
+        </div>
 
-        <nav class="hidden md:flex space-x-8 text-sm font-medium text-zinc-300">
-          <a href="#about" class="hover:text-white transition">About</a>
-          <a href="#projects" class="hover:text-white transition">Projects</a>
-          <a href="#contact" class="hover:text-white transition">Contact</a>
-          <a
-            href="https://github.com/KartikeyaLab"
-            class="hover:text-white transition"
-            target="_blank"
-            >Github</a
-          >
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="close-btn" />
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"
+            ><i class="fas fa-times"></i
+          ></label>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="https://github.com/KartikeyaLab" target="_blank">Github</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@clever-ways" target="_blank"
+              >Youtube</a
+            >
+          </li>
+          <li>
+            <a href="https://monkeytype.com/profile/Karitkeya" target="_blank"
+              >Monkeytype</a
+            >
+          </li>
+          <li>
+            <button
+              onclick="logout()"
+              class="logout-btn px-4 py-2 font-semibold text-sm text-white rounded-md transition-all duration-300"
+            >
+              Logout
+            </button>
+          </li>
+        </ul>
 
-          <a
-            href="https://monkeytype.com/profile/Karitkeya"
-            class="hover:text-white transition"
-            target="_blank"
-            >Monkeytype</a
-          >
-
-          <a
-            href="https://www.youtube.com/@clever-ways"
-            class="hover:text-white transition"
-            target="_blank"
-            >Youtube</a
-          >
-        </nav>
+        <label for="menu-btn" class="btn menu-btn"
+          ><i class="fas fa-bars"></i
+        ></label>
       </div>
-    </header>
+    </nav>
+    <!-- Nav bar Ends -->
     <section
       class="flex-grow flex flex-col justify-center items-center text-center px-6"
       style="height: calc(100vh - 4.5rem)"
@@ -155,12 +166,15 @@
         <!-- Put code here -->
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Login Page</h4>
-            <p class="text-zinc-400 mb-2">The 'Login Page' GitHub project contains source code for an interactive login form using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: April 12, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Login Page</h4>
+          <p class="text-zinc-400 mb-2">
+            The 'Login Page' GitHub project contains source code for an
+            interactive login form using HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: April 12, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -174,18 +188,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/login_page" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/login_page/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/login_page"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/login_page/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Bookshelf</h4>
-            <p class="text-zinc-400 mb-2">A JavaScript-driven web application to organize your digital library of books using HTML and CSS.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: April 12, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Bookshelf</h4>
+          <p class="text-zinc-400 mb-2">
+            A JavaScript-driven web application to organize your digital library
+            of books using HTML and CSS.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: April 12, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -199,18 +225,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Bookshelf" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Bookshelf/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Bookshelf"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Bookshelf/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Thank</h4>
-            <p class="text-zinc-400 mb-2">A simple web application called 'Thank' utilizes HTML, CSS, and JavaScript to create customizable, shareable thank you notes or messages.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: April 11, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Thank</h4>
+          <p class="text-zinc-400 mb-2">
+            A simple web application called 'Thank' utilizes HTML, CSS, and
+            JavaScript to create customizable, shareable thank you notes or
+            messages.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: April 11, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -224,18 +263,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/thank" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/thank/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/thank"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/thank/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Kartikeya</h4>
-            <p class="text-zinc-400 mb-2">Kartikeya is a web development project primarily utilizing HTML, CSS, and JavaScript to create dynamic, visually appealing user interfaces.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: April 11, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Kartikeya</h4>
+          <p class="text-zinc-400 mb-2">
+            Kartikeya is a web development project primarily utilizing HTML,
+            CSS, and JavaScript to create dynamic, visually appealing user
+            interfaces.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: April 11, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -249,18 +301,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/kartikeya" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/kartikeya/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/kartikeya"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/kartikeya/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Kartikeyadrive</h4>
-            <p class="text-zinc-400 mb-2">'Kartikeyadrive' is an interactive web application primarily built with HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: April 05, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Kartikeyadrive</h4>
+          <p class="text-zinc-400 mb-2">
+            'Kartikeyadrive' is an interactive web application primarily built
+            with HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: April 05, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -274,18 +338,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/kartikeyadrive" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/kartikeyadrive/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/kartikeyadrive"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/kartikeyadrive/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Travel Video Background</h4>
-            <p class="text-zinc-400 mb-2">A web application that offers customizable travel video backgrounds using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Travel Video Background</h4>
+          <p class="text-zinc-400 mb-2">
+            A web application that offers customizable travel video backgrounds
+            using HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -299,18 +375,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Travel-Video-Background" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Travel-Video-Background/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Travel-Video-Background"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Travel-Video-Background/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Trigya Travels</h4>
-            <p class="text-zinc-400 mb-2">Trigya Travels appears to be a web-based travel application built primarily with HTML, CSS, and JavaScript for an engaging and user-friendly experience in exploring travel destinations.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Trigya Travels</h4>
+          <p class="text-zinc-400 mb-2">
+            Trigya Travels appears to be a web-based travel application built
+            primarily with HTML, CSS, and JavaScript for an engaging and
+            user-friendly experience in exploring travel destinations.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -324,18 +413,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Trigya-travels" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Trigya-travels/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Trigya-travels"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Trigya-travels/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Travel Website</h4>
-            <p class="text-zinc-400 mb-2">A collaborative web project offering travel-related content, built primarily with HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Travel Website</h4>
+          <p class="text-zinc-400 mb-2">
+            A collaborative web project offering travel-related content, built
+            primarily with HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -349,18 +450,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Travel-Website" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Travel-Website/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Travel-Website"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Travel-Website/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Text Underline</h4>
-            <p class="text-zinc-400 mb-2">A simple HTML/CSS/JavaScript project that enhances text styling by implementing an underline effect.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Text Underline</h4>
+          <p class="text-zinc-400 mb-2">
+            A simple HTML/CSS/JavaScript project that enhances text styling by
+            implementing an underline effect.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -374,18 +487,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Text-underline" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Text-underline/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Text-underline"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Text-underline/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Text Portrait</h4>
-            <p class="text-zinc-400 mb-2">Text Portrait: An interactive web application that allows users to create visual portraits using text, implemented with HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Text Portrait</h4>
+          <p class="text-zinc-400 mb-2">
+            Text Portrait: An interactive web application that allows users to
+            create visual portraits using text, implemented with HTML, CSS, and
+            JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -399,18 +525,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Text-Portrait" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Text-Portrait/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Text-Portrait"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Text-Portrait/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Text Animation</h4>
-            <p class="text-zinc-400 mb-2">An interactive text animation project showcasing creative typography using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Text Animation</h4>
+          <p class="text-zinc-400 mb-2">
+            An interactive text animation project showcasing creative typography
+            using HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -424,18 +562,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Text-Animation" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Text-Animation/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Text-Animation"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Text-Animation/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">S23 Ultra Clone</h4>
-            <p class="text-zinc-400 mb-2">S23 Ultra Clone is an HTML/CSS/JavaScript project aimed at cloning design layouts of websites or web applications.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">S23 Ultra Clone</h4>
+          <p class="text-zinc-400 mb-2">
+            S23 Ultra Clone is an HTML/CSS/JavaScript project aimed at cloning
+            design layouts of websites or web applications.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -449,18 +599,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/S23-Ultra-Clone" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/S23-Ultra-Clone/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/S23-Ultra-Clone"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/S23-Ultra-Clone/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Salon Website</h4>
-            <p class="text-zinc-400 mb-2">A web project showcasing a salon's services, designed with a combination of HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Salon Website</h4>
+          <p class="text-zinc-400 mb-2">
+            A web project showcasing a salon's services, designed with a
+            combination of HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -474,18 +636,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Salon-website" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Salon-website/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Salon-website"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Salon-website/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Responsive Header</h4>
-            <p class="text-zinc-400 mb-2">A GitHub project named 'Responsive Header' is a collection of HTML, CSS, and JavaScript files aimed at creating adaptable header designs that resize and adjust layout according to different screen sizes.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Responsive Header</h4>
+          <p class="text-zinc-400 mb-2">
+            A GitHub project named 'Responsive Header' is a collection of HTML,
+            CSS, and JavaScript files aimed at creating adaptable header designs
+            that resize and adjust layout according to different screen sizes.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -499,18 +674,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Responsive-header" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Responsive-header/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Responsive-header"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Responsive-header/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Portfolio Website</h4>
-            <p class="text-zinc-400 mb-2">A dynamic, customizable personal webpage showcasing one's projects built with a foundation in HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Portfolio Website</h4>
+          <p class="text-zinc-400 mb-2">
+            A dynamic, customizable personal webpage showcasing one's projects
+            built with a foundation in HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -524,18 +711,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Portfolio-website" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Portfolio-website/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Portfolio-website"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Portfolio-website/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Page Not Find</h4>
-            <p class="text-zinc-400 mb-2">A web project focused on implementing customizable error pages using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Page Not Find</h4>
+          <p class="text-zinc-400 mb-2">
+            A web project focused on implementing customizable error pages using
+            HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -549,18 +748,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Page-not-find" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Page-not-find/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Page-not-find"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Page-not-find/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Oppo Website Clone</h4>
-            <p class="text-zinc-400 mb-2">This GitHub project is a clone of the Oppo website built primarily with HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Oppo Website Clone</h4>
+          <p class="text-zinc-400 mb-2">
+            This GitHub project is a clone of the Oppo website built primarily
+            with HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -574,18 +785,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Oppo-website-clone" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Oppo-website-clone/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Oppo-website-clone"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Oppo-website-clone/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Oneplus Clone</h4>
-            <p class="text-zinc-400 mb-2">Oneplus Clone is a web project that aims to recreate the interface design of OnePlus devices, utilizing primarily HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Oneplus Clone</h4>
+          <p class="text-zinc-400 mb-2">
+            Oneplus Clone is a web project that aims to recreate the interface
+            design of OnePlus devices, utilizing primarily HTML, CSS, and
+            JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -599,18 +823,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/OnePlus-clone" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/OnePlus-clone/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/OnePlus-clone"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/OnePlus-clone/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Header Design</h4>
-            <p class="text-zinc-400 mb-2">A GitHub project dedicated to designing custom header layouts using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Header Design</h4>
+          <p class="text-zinc-400 mb-2">
+            A GitHub project dedicated to designing custom header layouts using
+            HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -624,18 +860,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Header-design" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Header-design/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Header-design"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Header-design/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Neonbutton</h4>
-            <p class="text-zinc-400 mb-2">'Neonbutton' is a customizable interactive button built with HTML, CSS, and JavaScript, offering a neon aesthetic.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Neonbutton</h4>
+          <p class="text-zinc-400 mb-2">
+            'Neonbutton' is a customizable interactive button built with HTML,
+            CSS, and JavaScript, offering a neon aesthetic.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -649,18 +897,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Neonbutton" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Neonbutton/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Neonbutton"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Neonbutton/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Navigation Bar</h4>
-            <p class="text-zinc-400 mb-2">A Navigation Bar project offers an interactive user interface utilizing HTML, CSS, and JavaScript for creating customizable navigation menus.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Navigation Bar</h4>
+          <p class="text-zinc-400 mb-2">
+            A Navigation Bar project offers an interactive user interface
+            utilizing HTML, CSS, and JavaScript for creating customizable
+            navigation menus.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -674,18 +935,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Navigation-bar" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Navigation-bar/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Navigation-bar"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Navigation-bar/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Music Website</h4>
-            <p class="text-zinc-400 mb-2">A static Music Website project showcasing song details, designed with HTML, styled using CSS, and built with JavaScript for user interaction.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Music Website</h4>
+          <p class="text-zinc-400 mb-2">
+            A static Music Website project showcasing song details, designed
+            with HTML, styled using CSS, and built with JavaScript for user
+            interaction.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -699,18 +973,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Music-website" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Music-website/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Music-website"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Music-website/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Modern Website</h4>
-            <p class="text-zinc-400 mb-2">Modern Website is a project showcasing contemporary web design utilizing HTML, CSS, and JavaScript technologies.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Modern Website</h4>
+          <p class="text-zinc-400 mb-2">
+            Modern Website is a project showcasing contemporary web design
+            utilizing HTML, CSS, and JavaScript technologies.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -724,18 +1010,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Modern-website" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Modern-website/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Modern-website"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Modern-website/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Iphone14 Clone</h4>
-            <p class="text-zinc-400 mb-2">A self-proclaimed clone of the iPhone 14, developed using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Iphone14 Clone</h4>
+          <p class="text-zinc-400 mb-2">
+            A self-proclaimed clone of the iPhone 14, developed using HTML, CSS,
+            and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -749,18 +1047,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Iphone14-clone" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Iphone14-clone/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Iphone14-clone"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Iphone14-clone/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Background Video</h4>
-            <p class="text-zinc-400 mb-2">Interactive web page with a customizable background video using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Background Video</h4>
+          <p class="text-zinc-400 mb-2">
+            Interactive web page with a customizable background video using
+            HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -774,18 +1084,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Background-video" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Background-video/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Background-video"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Background-video/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Website Header</h4>
-            <p class="text-zinc-400 mb-2">This GitHub project, titled 'Website Header', is an open-source collection of code snippets focused on creating and customizing website headers primarily using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Website Header</h4>
+          <p class="text-zinc-400 mb-2">
+            This GitHub project, titled 'Website Header', is an open-source
+            collection of code snippets focused on creating and customizing
+            website headers primarily using HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -799,18 +1122,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Website-Header" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Website-Header/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Website-Header"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Website-Header/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Zflip 4</h4>
-            <p class="text-zinc-400 mb-2">'Zflip 4' appears to be an interactive HTML, CSS, and JavaScript project designed to provide a flipping or scrollable content experience.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Zflip 4</h4>
+          <p class="text-zinc-400 mb-2">
+            'Zflip 4' appears to be an interactive HTML, CSS, and JavaScript
+            project designed to provide a flipping or scrollable content
+            experience.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -824,18 +1160,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/ZFlip-4" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/ZFlip-4/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/ZFlip-4"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/ZFlip-4/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Websiteheader Green</h4>
-            <p class="text-zinc-400 mb-2">A project for designing a dynamic and customizable website header using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Websiteheader Green</h4>
+          <p class="text-zinc-400 mb-2">
+            A project for designing a dynamic and customizable website header
+            using HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -849,18 +1197,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/WebsiteHeader-Green" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/WebsiteHeader-Green/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/WebsiteHeader-Green"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/WebsiteHeader-Green/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Galaxy Book3</h4>
-            <p class="text-zinc-400 mb-2">Interactive sci-fi eBook experience in space, utilizing HTML, CSS, and JavaScript for web-based exploration of galaxies and books.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Galaxy Book3</h4>
+          <p class="text-zinc-400 mb-2">
+            Interactive sci-fi eBook experience in space, utilizing HTML, CSS,
+            and JavaScript for web-based exploration of galaxies and books.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -874,18 +1234,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Galaxy-Book3" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Galaxy-Book3/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Galaxy-Book3"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Galaxy-Book3/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Emoji Search</h4>
-            <p class="text-zinc-400 mb-2">Emoji Search is an interactive web application that allows users to search for emojis using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Emoji Search</h4>
+          <p class="text-zinc-400 mb-2">
+            Emoji Search is an interactive web application that allows users to
+            search for emojis using HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -899,18 +1271,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Emoji-Search" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Emoji-Search/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Emoji-Search"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Emoji-Search/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Car Website</h4>
-            <p class="text-zinc-400 mb-2">The 'Car Website' GitHub project is an interactive webpage featuring various types of cars, built primarily with HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Car Website</h4>
+          <p class="text-zinc-400 mb-2">
+            The 'Car Website' GitHub project is an interactive webpage featuring
+            various types of cars, built primarily with HTML, CSS, and
+            JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -924,18 +1309,31 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Car-Website" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Car-Website/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Car-Website"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Car-Website/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Button Ripple Effect</h4>
-            <p class="text-zinc-400 mb-2">Button Ripple Effect is an open-source project that demonstrates how to create dynamic, animating ripple effects on buttons using HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Button Ripple Effect</h4>
+          <p class="text-zinc-400 mb-2">
+            Button Ripple Effect is an open-source project that demonstrates how
+            to create dynamic, animating ripple effects on buttons using HTML,
+            CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -949,18 +1347,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Button-Ripple-Effect" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Button-Ripple-Effect/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Button-Ripple-Effect"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Button-Ripple-Effect/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Windows11 Clone</h4>
-            <p class="text-zinc-400 mb-2">A project aiming to recreate the look and feel of Windows 11 UI, utilizing HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Windows11 Clone</h4>
+          <p class="text-zinc-400 mb-2">
+            A project aiming to recreate the look and feel of Windows 11 UI,
+            utilizing HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -974,18 +1384,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Windows11-clone" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Windows11-clone/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Windows11-clone"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Windows11-clone/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Animated Website</h4>
-            <p class="text-zinc-400 mb-2">An interactive website featuring dynamic visuals, implemented primarily with HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Animated Website</h4>
+          <p class="text-zinc-400 mb-2">
+            An interactive website featuring dynamic visuals, implemented
+            primarily with HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -999,18 +1421,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Animated-Website" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Animated-Website/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Animated-Website"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Animated-Website/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Animmated Header</h4>
-            <p class="text-zinc-400 mb-2">Interactive, animated web header utilizing HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Animmated Header</h4>
+          <p class="text-zinc-400 mb-2">
+            Interactive, animated web header utilizing HTML, CSS, and
+            JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -1024,18 +1458,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/Animmated-header" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/Animmated-header/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/Animmated-header"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/Animmated-header/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Dwps Ashta</h4>
-            <p class="text-zinc-400 mb-2">Dwps Ashta is a web development project showcasing an interactive user interface built with HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Dwps Ashta</h4>
+          <p class="text-zinc-400 mb-2">
+            Dwps Ashta is a web development project showcasing an interactive
+            user interface built with HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -1049,18 +1495,30 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/DWPS-Ashta" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/DWPS-Ashta/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/DWPS-Ashta"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/DWPS-Ashta/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
 
         <div
-      class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
-    >
-            <h4 class="text-2xl font-semibold mb-2">Madeforyou</h4>
-            <p class="text-zinc-400 mb-2">Madeforyou is a customizable web development project built primarily with HTML, CSS, and JavaScript.</p>
-            <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
-       <div class="flex flex-wrap gap-2 text-sm mb-4">
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Madeforyou</h4>
+          <p class="text-zinc-400 mb-2">
+            Madeforyou is a customizable web development project built primarily
+            with HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
               class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
               >HTML</span
@@ -1074,11 +1532,21 @@
               >Javascript</span
             >
           </div>
-            <a href="https://github.com/KartikeyaLab/MadeForYou" target="_blank" class="text-blue-400 hover:underline text-sm">View Project ↗</a>
-            <a href="https://kartikeyalab.github.io/MadeForYou/" target="_blank" class="text-blue-400 hover:underline text-sm ml-4">Live Demo ↗</a>
+          <a
+            href="https://github.com/KartikeyaLab/MadeForYou"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/MadeForYou/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
         </div>
-    
-<!-- -->
+
+        <!-- -->
       </div>
     </section>
 
@@ -1229,6 +1697,11 @@
           animateGlow();
         });
       });
+
+      function logout() {
+        localStorage.removeItem("loggedIn");
+        window.location.href = "login.html";
+      }
     </script>
   </body>
 </html>
