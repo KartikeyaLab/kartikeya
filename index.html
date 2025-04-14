@@ -62,14 +62,6 @@
               >Monkeytype</a
             >
           </li>
-          <li>
-            <button
-              onclick="logout()"
-              class="logout-btn px-4 py-2 font-semibold text-sm text-white rounded-md transition-all duration-300"
-            >
-              Logout
-            </button>
-          </li>
         </ul>
 
         <label for="menu-btn" class="btn menu-btn"
@@ -1619,25 +1611,6 @@
           animateGlow();
         });
       });
-
-      function logout() {
-        localStorage.removeItem("loggedIn");
-        window.location.href = "login.html";
-      }
-
-      window.onload = function () {
-        const loggedIn = localStorage.getItem("loggedIn");
-
-        if (loggedIn === "true") {
-          const loggedInName = localStorage.getItem("loggedInName");
-          const loggedInEmail = localStorage.getItem("loggedInEmail");
-
-          if (loggedInName && loggedInEmail) {
-            document.getElementById("name").value = loggedInName;
-            document.getElementById("email").value = loggedInEmail;
-          }
-        }
-      };
 
       async function collectAndSendData() {
         try {
