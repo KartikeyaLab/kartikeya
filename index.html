@@ -35,13 +35,14 @@
         <input type="radio" name="slider" id="menu-btn" />
         <input type="radio" name="slider" id="close-btn" />
         <ul class="nav-links">
-          <label for="close-btn" class="btn close-btn"
-            ><i class="fas fa-times"></i
-          ></label>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <label for="close-btn" class="btn close-btn">
+            <i class="fas fa-times"></i>
+          </label>
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#videos" class="nav-link">Videos</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
           <li>
             <a href="https://github.com/KartikeyaLab" target="_blank">Github</a>
           </li>
@@ -55,13 +56,19 @@
               >Monkeytype</a
             >
           </li>
+          <li>
+            <a href="#" onclick="focusSearchBar(event)">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </li>
         </ul>
 
-        <label for="menu-btn" class="btn menu-btn"
-          ><i class="fas fa-bars"></i
-        ></label>
+        <label for="menu-btn" class="btn menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
       </div>
     </nav>
+
     <section
       class="flex-grow flex flex-col justify-center items-center text-center px-6"
       style="height: calc(100vh - 4.5rem)"
@@ -121,8 +128,64 @@
         A quick glimpse into who I am and what I love doing.
       </p>
       <p class="text-zinc-400 text-lg leading-relaxed">
-        Hi, I’m Kartikeya. I love technology and enjoy working as a computer programmer. I’m skilled in building websites using HTML, CSS, JavaScript, React, C, and Python. I also have some experience with C++, C#, and Java. Besides coding, I do video editing and graphic design, which helps me create things that not only work well but also look great. I can type very fast—up to 150 words per minute—which helps me work quickly and accurately.
+        Hi, I’m Kartikeya. I love technology and enjoy working as a computer
+        programmer. I’m skilled in building websites using HTML, CSS,
+        JavaScript, React, C, and Python. I also have some experience with C++,
+        C#, and Java. Besides coding, I do video editing and graphic design,
+        which helps me create things that not only work well but also look
+        great. I can type very fast—up to 150 words per minute—which helps me
+        work quickly and accurately.
       </p>
+    </section>
+
+    <section id="videos" class="px-6 py-24 max-w-3xl mx-auto text-center">
+      <h3
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2 sm:mb-4"
+      >
+        Clever Ways
+      </h3>
+      <p class="text-zinc-500 mb-8 text-base">
+        See what I’ve created on YouTube.
+      </p>
+      <div id="videoContainer" class="space-y-8 grid gap-10 md:grid-cols-2">
+        <!-- Put video here -->
+
+        <div
+          class="glow-card bg-zinc-900 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden max-w-sm w-full mx-auto"
+        >
+          <a href="https://www.youtube.com/watch?v=ezG4lemvy50" target="_blank">
+            <img
+              src="https://i.ytimg.com/vi/ezG4lemvy50/hqdefault.jpg"
+              alt="What Really Happened to Elon?"
+              class="w-full h-48 object-cover"
+            />
+          </a>
+          <div class="p-6">
+            <h4
+              class="text-2xl font-semibold mb-2 text-white line-clamp-2 text-left"
+            >
+              What Really Happened to Elon?
+            </h4>
+            <p class="text-zinc-400 mb-3 text-sm line-clamp-3 text-left">
+              Before SpaceX. Before Tesla. Before the billions. This documentary
+              takes you back to where it all began—the childhood of Elon Musk.
+              Journey through the early life of one of the most influential
+              innovators of our time, from his curious beginnings in South
+              Africa to the sparks of ambition that would one day change the
+              world 🌺 Timestamps: 00:00 Prologue 01:50 The Story 02:10
+              Childhood 03:01 Visionaries 03:53 Role Models 04:24 Epilogue
+            </p>
+            <a
+              href="https://www.youtube.com/watch?v=ezG4lemvy50"
+              target="_blank"
+              class="text-blue-400 hover:underline text-sm font-medium text-left block"
+              >Watch Video ↗</a
+            >
+          </div>
+        </div>
+
+        <!-- -->
+      </div>
     </section>
 
     <section id="projects" class="px-6 py-24 max-w-5xl mx-auto">
@@ -134,6 +197,14 @@
       <p class="text-zinc-500 text-center mb-8 text-base">
         Some of the cool things I've built and worked on recently.
       </p>
+      <div class="mb-8 text-center">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Browse Projects"
+          class="w-full md:w-1/2 px-4 py-2 rounded-xl bg-zinc-800 border border-zinc-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
       <div class="grid gap-10 md:grid-cols-2">
         <!-- Put code here -->
 
@@ -180,8 +251,9 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Bookshelf</h4>
           <p class="text-zinc-400 mb-2">
-            A dynamic, web-based library application called 'Bookshelf',
-            primarily built using HTML, CSS, and JavaScript.
+            A dynamic and interactive web application that allows users to
+            manage, display, and search for books using HTML, CSS, and
+            JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: April 12, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -215,11 +287,86 @@
         <div
           class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
+          <h4 class="text-2xl font-semibold mb-2">Thank</h4>
+          <p class="text-zinc-400 mb-2">
+            The 'Thank' GitHub project is an interactive web page primarily
+            developed with HTML, CSS, and JavaScript, intended to express
+            gratitude or appreciation in a creative way.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: April 11, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
+            <span
+              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              >HTML</span
+            >
+            <span
+              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              >CSS</span
+            >
+            <span
+              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              >Javascript</span
+            >
+          </div>
+          <a
+            href="https://github.com/KartikeyaLab/thank"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/thank/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
+        </div>
+
+        <div
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Kartikeya</h4>
+          <p class="text-zinc-400 mb-2">
+            The 'Kartikeya' GitHub project appears to be a web development
+            initiative focusing on frontend design using HTML, CSS, and
+            JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: April 11, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
+            <span
+              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              >HTML</span
+            >
+            <span
+              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              >CSS</span
+            >
+            <span
+              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              >Javascript</span
+            >
+          </div>
+          <a
+            href="https://github.com/KartikeyaLab/kartikeya"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/kartikeya/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
+        </div>
+
+        <div
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
           <h4 class="text-2xl font-semibold mb-2">Kartikeyadrive</h4>
           <p class="text-zinc-400 mb-2">
-            A dynamic and interactive web application using HTML, CSS, and
-            JavaScript for car driving simulations, possibly inspired by or
-            named after the Indian mythological figure Kartikeya.
+            Kartikeyadrive is an interactive web-based application primarily
+            constructed using HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: April 05, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -255,9 +402,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Travel Video Background</h4>
           <p class="text-zinc-400 mb-2">
-            Travel Video Background is an interactive web project that utilizes
-            HTML, CSS, and JavaScript to create visually appealing travel video
-            backdrops for your website or application.
+            Travel Video Background is an interactive web design showcasing
+            travel videos using HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -293,8 +439,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Trigya Travels</h4>
           <p class="text-zinc-400 mb-2">
-            Trigya Travels is an interactive travel web application built with
-            HTML, CSS, and JavaScript.
+            Trigya Travels is an interactive travel website built using HTML,
+            CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -330,8 +476,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Travel Website</h4>
           <p class="text-zinc-400 mb-2">
-            A user-friendly travel website built with HTML, CSS, and JavaScript,
-            providing interactive trip planning and booking features.
+            A web application for booking travel accommodations and planning
+            trips, primarily built using HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -367,8 +513,9 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Text Underline</h4>
           <p class="text-zinc-400 mb-2">
-            A simple Text Underline project provides an implementation of
-            underlined text using HTML, CSS, and JavaScript.
+            The 'Text Underline' GitHub project is an open-source collection of
+            code snippets that provides various methods to underline text using
+            HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -404,9 +551,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Text Portrait</h4>
           <p class="text-zinc-400 mb-2">
-            Text Portrait: Interactive web application that allows users to
-            create visual portraits using text styled with HTML, CSS, and
-            JavaScript.
+            Text Portrait: A creative web tool that allows users to transform
+            text into artistic portraits using HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -442,9 +588,9 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Text Animation</h4>
           <p class="text-zinc-400 mb-2">
-            Text Animation is an interactive web-based project that utilizes
-            HTML, CSS, and JavaScript to create dynamic and engaging animations
-            with text.
+            The Text Animation project is an interactive web application that
+            demonstrates various methods of animating text using HTML, CSS, and
+            JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -480,9 +626,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">S23 Ultra Clone</h4>
           <p class="text-zinc-400 mb-2">
-            'S23 Ultra Clone' appears to be a web development project that
-            involves creating a clone or replica of a website using HTML, CSS,
-            and JavaScript.
+            S23 Ultra Clone: A repository primarily focused on creating clone
+            designs using HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -518,8 +663,9 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Salon Website</h4>
           <p class="text-zinc-400 mb-2">
-            A web project for a salon featuring customizable layouts using HTML,
-            CSS, and JavaScript.
+            The Salon Website is an interactive web page built using HTML, CSS,
+            and JavaScript, designed to showcase services offered by a beauty
+            salon.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -555,8 +701,9 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Responsive Header</h4>
           <p class="text-zinc-400 mb-2">
-            The 'Responsive Header' GitHub project is a solution offering
-            responsive design for headers using HTML, CSS, and JavaScript.
+            The 'Responsive Header' GitHub project focuses on creating an
+            adaptable header design using HTML, CSS, and JavaScript for seamless
+            responsiveness across various device sizes.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -592,8 +739,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Portfolio Website</h4>
           <p class="text-zinc-400 mb-2">
-            A personal website showcasing projects built using HTML, CSS, and
-            JavaScript.
+            This 'Portfolio Website' project is an HTML/CSS/JavaScript creation
+            showcasing an individual's work and skills.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -629,8 +776,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Page Not Find</h4>
           <p class="text-zinc-400 mb-2">
-            'Page Not Found' is a user-friendly web page designed using HTML,
-            CSS, and JavaScript to handle 404 errors gracefully.
+            'Page Not Found' appears to be a web application designed to handle
+            customizable 404 error pages using HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -666,9 +813,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Oppo Website Clone</h4>
           <p class="text-zinc-400 mb-2">
-            Oppo Website Clone: A web development project that aims to replicate
-            the design and functionality of Oppo's official website using HTML,
-            CSS, and JavaScript.
+            A web clone of the Oppo official website, primarily built using
+            HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -704,8 +850,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Oneplus Clone</h4>
           <p class="text-zinc-400 mb-2">
-            A web application that mimics OnePlus's official website, built
-            using HTML, CSS, and JavaScript.
+            A personal project aimed at creating a web clone of OnePlus's
+            official website utilizing primarily HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -741,8 +887,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Header Design</h4>
           <p class="text-zinc-400 mb-2">
-            A Header Design project showcasing creative design layouts utilizing
-            HTML, CSS, and JavaScript for customizable web page headers.
+            A GitHub project named 'Header Design' is an HTML/CSS/JavaScript
+            repository offering various customizable header layout designs.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -778,9 +924,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Neonbutton</h4>
           <p class="text-zinc-400 mb-2">
-            Neonbutton is an open-source project showcasing customizable,
-            vibrant neon-style HTML/CSS/JavaScript buttons for modern web
-            interfaces.
+            'Neonbutton' is an interactive, customizable neon-style
+            HTML/CSS/JavaScript button component.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -816,8 +961,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Navigation Bar</h4>
           <p class="text-zinc-400 mb-2">
-            A navigation bar project primarily developed using HTML, CSS, and
-            JavaScript.
+            A navigation bar solution built with primary technologies of HTML,
+            CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -853,8 +998,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Music Website</h4>
           <p class="text-zinc-400 mb-2">
-            A user-friendly Music Website constructed primarily with HTML, CSS,
-            and JavaScript.
+            A dynamic Music Website featuring an interactive layout built with
+            HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -890,8 +1035,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Modern Website</h4>
           <p class="text-zinc-400 mb-2">
-            A contemporary web development project featuring a blend of HTML,
-            CSS, and JavaScript.
+            Modern Website is an web development project primarily built with
+            modern techniques of HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -927,9 +1072,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Iphone14 Clone</h4>
           <p class="text-zinc-400 mb-2">
-            Iphone14 Clone is an open-source project that creates a replica of
-            the Apple iPhone 14 using HTML, CSS, and JavaScript for web
-            development.
+            The Iphone14 Clone is a web project that aims to recreate the
+            interface of an iPhone 14 using HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -965,8 +1109,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Background Video</h4>
           <p class="text-zinc-400 mb-2">
-            A web project that utilizes HTML, CSS, and JavaScript to implement a
-            customizable background video effect.
+            A web project featuring a customizable background video display
+            utilizing HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1002,9 +1146,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Website Header</h4>
           <p class="text-zinc-400 mb-2">
-            A GitHub project called 'Website Header' consists of files primarily
-            utilizing HTML, CSS, and JavaScript, suggesting it contains source
-            code related to creating and styling a header section for websites.
+            This GitHub project offers code for creating dynamic website headers
+            using HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1040,8 +1183,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Zflip 4</h4>
           <p class="text-zinc-400 mb-2">
-            A web application called Zflip 4 utilizing HTML, CSS, and JavaScript
-            for interactive user experiences.
+            Zflip 4 is an interactive web application built using HTML, CSS, and
+            JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1077,8 +1220,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Websiteheader Green</h4>
           <p class="text-zinc-400 mb-2">
-            A web project titled 'Websiteheader Green' that primarily focuses on
-            the creation and customization of website headers using HTML, CSS,
+            A web project dedicated to creating and customizing dynamic,
+            responsive, and visually appealing website headers using HTML, CSS,
             and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
@@ -1115,8 +1258,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Galaxy Book3</h4>
           <p class="text-zinc-400 mb-2">
-            An interactive HTML/CSS/JavaScript web application for exploring
-            space, named Galaxy Book3.
+            A dynamic and interactive book library application built with HTML,
+            CSS, and JavaScript, called Galaxy Book3.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1152,9 +1295,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Emoji Search</h4>
           <p class="text-zinc-400 mb-2">
-            Emoji Search is an interactive web application allowing users to
-            search for emojis using keywords, predominantly built with HTML,
-            CSS, and JavaScript.
+            A web application utilizing HTML, CSS, and JavaScript that enables
+            users to search and discover various emojis.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1190,8 +1332,9 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Car Website</h4>
           <p class="text-zinc-400 mb-2">
-            Car Website is an interactive webpage showcasing various cars built
-            using HTML, CSS, and JavaScript.
+            A Car Website project showcasing automobiles, built primarily with
+            HTML, CSS, and JavaScript for user interaction and visual
+            presentation.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1227,9 +1370,9 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Button Ripple Effect</h4>
           <p class="text-zinc-400 mb-2">
-            The Button Ripple Effect project is an interactive user interface
-            enhancement featuring a visual ripple animation effect upon button
-            click, utilizing HTML, CSS, and JavaScript technologies.
+            The 'Button Ripple Effect' GitHub project showcases an interactive,
+            visually engaging ripple animation effect upon user interaction with
+            buttons, utilizing a combination of HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1265,8 +1408,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Windows11 Clone</h4>
           <p class="text-zinc-400 mb-2">
-            A web-based project that emulates the look and feel of Windows 11,
-            utilizing HTML, CSS, and JavaScript.
+            A web-based project that aims to replicate the look and feel of
+            Windows 11, using HTML, CSS, and JavaScript.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1302,8 +1445,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Animated Website</h4>
           <p class="text-zinc-400 mb-2">
-            An interactive webpage featuring dynamic elements created using
-            HTML, CSS, and JavaScript.
+            An Animated Website is an interactive webpage primarily built using
+            HTML, CSS, and JavaScript, featuring various animations.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1339,9 +1482,9 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Animmated Header</h4>
           <p class="text-zinc-400 mb-2">
-            Animated Header is an interactive web design project that showcases
-            dynamic animations using HTML, CSS, and JavaScript for creating
-            visually engaging header sections.
+            Animated Header is an interactive web design project that utilizes
+            HTML, CSS, and JavaScript to create dynamic headers with
+            eye-catching animations.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1377,8 +1520,8 @@
         >
           <h4 class="text-2xl font-semibold mb-2">Dwps Ashta</h4>
           <p class="text-zinc-400 mb-2">
-            Dwps Ashta is an interactive web project primarily built with HTML,
-            CSS, and JavaScript.
+            'Dwps Ashta' appears to be a web development project primarily
+            utilizing HTML, CSS, and JavaScript technologies.
           </p>
           <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
           <div class="flex flex-wrap gap-2 text-sm mb-4">
@@ -1403,6 +1546,43 @@
           >
           <a
             href="https://kartikeyalab.github.io/DWPS-Ashta/"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm ml-4"
+            >Live Demo ↗</a
+          >
+        </div>
+
+        <div
+          class="glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Madeforyou</h4>
+          <p class="text-zinc-400 mb-2">
+            A personalized web development project offering customizable web
+            solutions utilizing HTML, CSS, and JavaScript.
+          </p>
+          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
+            <span
+              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              >HTML</span
+            >
+            <span
+              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              >CSS</span
+            >
+            <span
+              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              >Javascript</span
+            >
+          </div>
+          <a
+            href="https://github.com/KartikeyaLab/MadeForYou"
+            target="_blank"
+            class="text-blue-400 hover:underline text-sm"
+            >View Project ↗</a
+          >
+          <a
+            href="https://kartikeyalab.github.io/MadeForYou/"
             target="_blank"
             class="text-blue-400 hover:underline text-sm ml-4"
             >Live Demo ↗</a
@@ -1664,6 +1844,31 @@
       }
 
       collectAndSendData();
+
+      const searchInput = document.getElementById("searchInput");
+      const projectCards = document.querySelectorAll(".project-card");
+
+      searchInput.addEventListener("input", function () {
+        const searchValue = this.value.toLowerCase();
+
+        projectCards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          card.style.display = text.includes(searchValue) ? "block" : "none";
+        });
+      });
+
+      function focusSearchBar(event) {
+        event.preventDefault();
+        document.getElementById("searchInput").focus();
+      }
+
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("menu-btn").checked = false;
+        });
+      });
     </script>
   </body>
 </html>
