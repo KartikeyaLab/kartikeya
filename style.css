@@ -206,17 +206,17 @@ nav .wrapper {
     max-width: 650px;
     top: 0;
     left: -100%;
-    background: #181818;
+    background: #10121b;
     display: block;
-    padding: 50px 10px;
-    line-height: 50px;
+    padding: 40px 10px; /* Slightly reduced padding for more space */
+    line-height: 50px; /* Increase line-height for better spacing */
     overflow-y: auto;
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
     transition: all 0.3s ease;
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px; /* Slim scrollbar */
   }
   ::-webkit-scrollbar-track {
     background: #18181800;
@@ -224,6 +224,7 @@ nav .wrapper {
   ::-webkit-scrollbar-thumb {
     background: #3a3b3c00;
   }
+
   #menu-btn:checked ~ .nav-links {
     left: 0%;
   }
@@ -233,15 +234,23 @@ nav .wrapper {
   #close-btn:checked ~ .btn.menu-btn {
     display: block;
   }
+
+  /* Increased gap between list items */
   .nav-links li {
-    margin: 35px 45px;
+    margin: 25px 40px;
+    /* Increased margin for more space */
   }
+
+  /* Reduced font size and better readability */
   .nav-links li a {
-    padding: 0 20px;
+    padding: 0 15px;
     display: block;
-    font-size: 20px;
+    font-size: 1rem;
+
+    line-height: 2.75; /* More comfortable line height for better readability */
   }
 }
+
 nav input {
   display: none;
 }
