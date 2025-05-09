@@ -2058,14 +2058,6 @@
         <!-- Form -->
         <div class="w-full md:w-1/2 p-6 sm:p-10">
           <form id="contactForm" class="space-y-6">
-            <input type="hidden" name="_captcha" value="false" />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://kartikeyalab.github.io/thankyou/"
-            />
-            <input type="hidden" name="_template" value="table" />
-
             <div>
               <label class="block text-sm mb-1 text-zinc-400">Full Name</label>
               <input
@@ -2108,6 +2100,16 @@
               <span>Send Message</span>
               <div class="loader ml-2" id="loader"></div>
             </button>
+
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://kartikeyalab.github.io/thankyou/"
+            />
+
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="Someone Mailed You!" />
           </form>
         </div>
 
