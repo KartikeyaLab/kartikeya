@@ -69,6 +69,12 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </a>
             </li>
+
+            <li class="search_botton">
+              <a href="#footer">
+                <i class="fa-solid fa-turn-down"></i>
+              </a>
+            </li>
           </ul>
 
           <label for="menu-btn" class="btn menu-btn">
@@ -161,7 +167,9 @@
         <p class="dim_text mb-8 text-base">
           A quick glimpse into who I am and what I love doing.
         </p>
-        <p class="text-zinc-400 text-lg leading-relaxed">
+        <p
+          class="text-zinc-400 text-base md:text-lg leading-relaxed md:leading-loose"
+        >
           Hello, my name is Kartikeya. I am a dedicated computer programmer with
           a strong passion for technology and software development. I specialize
           in front-end web development, working extensively with HTML5, CSS3
@@ -170,14 +178,18 @@
           user interfaces that suit the project’s needs.
         </p>
 
-        <p class="text-zinc-400 text-lg leading-relaxed mt-6">
+        <p
+          class="text-zinc-400 text-base md:text-lg leading-relaxed md:leading-loose mt-4 md:mt-6"
+        >
           In addition to front-end development, I have experience with Python,
           which I use for scripting, automation, and developing lightweight
           back-end services. I’ve also worked with C to better understand
           low-level programming concepts and system architecture.
         </p>
 
-        <p class="text-zinc-400 text-lg leading-relaxed mt-6">
+        <p
+          class="text-zinc-400 text-base md:text-lg leading-relaxed md:leading-loose mt-4 md:mt-6"
+        >
           Outside of software development, I have a background in multimedia
           production, particularly video editing, where I use DaVinci Resolve to
           create and edit video content for my projects. I aim to combine my
@@ -185,7 +197,9 @@
           and visually appealing.
         </p>
 
-        <p class="text-zinc-400 text-lg leading-relaxed mt-6">
+        <p
+          class="text-zinc-400 text-base md:text-lg leading-relaxed md:leading-loose mt-4 md:mt-6"
+        >
           I am also a fast typist, with a typing speed of over 100 words per
           minute, which helps me work efficiently and maintain precision when
           coding, debugging, and documenting.
@@ -2148,10 +2162,63 @@
           </div>
         </div>
       </section>
+
       <footer
-        class="text-center py-6 text-zinc-600 text-sm border-t border-zinc-800"
+        id="footer"
+        class="relative w-full bg-black bg-opacity-90 text-white"
+        style="
+          background-image: linear-gradient(
+              to top,
+              rgba(0, 0, 0, 0.85),
+              rgba(0, 0, 0, 0.7),
+              rgba(0, 0, 0, 0.6)
+            ),
+            url('Media/Background.png');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+        "
       >
-        © <span id="year"></span> Kartikeya. All rights reserved.
+        <div class="space_height"></div>
+        <div class="transparent_overlay_bottom"></div>
+        <div class="w-full border-b border-zinc-700"></div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between gap-12 px-6 md:px-16 py-12"
+        >
+          <div class="w-full md:w-1/2">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-normal"
+            >
+              About Me
+            </h2>
+            <p class="text-zinc-400 text-base md:text-lg leading-snug mt-4">
+              I’m Kartikeya, a programmer and typist, skilled in front-end
+              development (HTML, CSS, JavaScript, React) and Python. I also have
+              experience in C and video editing
+            </p>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-normal"
+            >
+              Wanna talk?
+            </h2>
+            <p class="text-zinc-400 text-base md:text-lg leading-snug mt-4">
+              Let’s connect and create something amazing together. Feel free to
+              reach out to me here
+              <a href="#contact" class="underline">contact</a>. I’m open to new
+              ideas and collaborations. Let’s create!
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="text-center py-6 text-zinc-400 text-sm border-t border-zinc-700"
+        >
+          © <span id="year"></span> Kartikeya. All rights reserved.
+        </div>
       </footer>
     </div>
     <script>
