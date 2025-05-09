@@ -311,7 +311,6 @@ nav input {
     opacity: 0.7;
   }
 }
-
 #loading-circle {
   position: fixed;
   top: 0;
@@ -320,29 +319,21 @@ nav input {
   height: 100%;
   background-color: #10121b;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 99999;
   opacity: 1;
   visibility: visible;
-  transition: opacity 1s ease, visibility 0s 1s;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
 }
 
 #loading-circle.hidden {
   opacity: 0;
   visibility: hidden;
+  z-index: -99999;
 }
 
-.container_universal_hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-in-out, visibility 0s 0s;
-}
-
-.container_universal_hidden.show {
-  opacity: 1;
-  visibility: visible;
-}
 .spinner {
   width: 56px;
   height: 56px;
@@ -358,5 +349,53 @@ nav input {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.quote-text {
+  margin-top: 20px;
+  color: #f8f3d9;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 80%;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  transition: opacity 0.5s ease;
+}
+
+.quote-text.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.quote-text.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.container_universal_hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 0s 0s;
+}
+
+.container_universal_hidden.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
