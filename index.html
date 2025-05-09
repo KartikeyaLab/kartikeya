@@ -2134,7 +2134,6 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-
       document
         .getElementById("contactForm")
         .addEventListener("submit", function (e) {
@@ -2151,21 +2150,28 @@
           formData.append("_captcha", "false");
           formData.append("_template", "table");
 
+          // Sending form data via fetch
           fetch("https://formsubmit.co/kartikeya30062009@gmail.com", {
             method: "POST",
             body: formData,
           })
             .then((response) => {
+              console.log("Response Status:", response.status); // Check status code
               if (response.ok) {
+                console.log("Form submitted successfully");
+                // Redirect to the thank-you page after successful submission
                 window.location.href =
                   "https://kartikeyalab.github.io/thankyou/";
               } else {
+                // If the response is not okay, log the error and show an alert
+                console.error("Error in form submission:", response.statusText);
                 alert(
                   "There was an error submitting your form. Please try again later."
                 );
               }
             })
             .catch((error) => {
+              // Catch and log any fetch errors
               console.error("Form submission error:", error);
               alert("An unexpected error occurred.");
             });
