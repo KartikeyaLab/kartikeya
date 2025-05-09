@@ -2144,10 +2144,13 @@
           formData.append("_captcha", "false");
           formData.append("_template", "table");
 
-          fetch("https://formsubmit.co/kartikeya30062009@gmail.com", {
-            method: "POST",
-            body: formData,
-          })
+          fetch(
+            "https://cors-anywhere.herokuapp.com/https://formsubmit.co/kartikeya30062009@gmail.com",
+            {
+              method: "POST",
+              body: formData,
+            }
+          )
             .then((response) => {
               if (response.ok) {
                 window.location.href =
