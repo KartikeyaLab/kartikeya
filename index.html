@@ -2389,18 +2389,48 @@
         });
       });
 
-      Promise.race([
-        document.fonts.ready,
-        new Promise((resolve) => setTimeout(resolve, 5000)),
-      ]).then(() => {
-        const loadingCircle = document.getElementById("loading-circle");
-        const content = document.querySelector(".container_universal_hidden");
+      function waitForFontAwesomeIcons(timeout = 5000) {
+        return new Promise((resolve) => {
+          const start = performance.now();
 
-        loadingCircle.classList.add("hidden");
+          function areIconsRendered() {
+            const icons = document.querySelectorAll(
+              ".fa, .fas, .far, .fal, .fab, .fad"
+            );
+            if (icons.length === 0) return false;
 
-        setTimeout(() => {
-          content.classList.add("show");
-        }, 1000);
+            return Array.from(icons).every((icon) =>
+              getComputedStyle(icon)
+                .fontFamily.toLowerCase()
+                .includes("fontawesome")
+            );
+          }
+
+          function check() {
+            if (areIconsRendered()) {
+              resolve();
+            } else if (performance.now() - start > timeout) {
+              resolve();
+            } else {
+              requestAnimationFrame(check);
+            }
+          }
+
+          check();
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        waitForFontAwesomeIcons().then(() => {
+          const loadingCircle = document.getElementById("loading-circle");
+          const content = document.querySelector(".container_universal_hidden");
+
+          if (loadingCircle) loadingCircle.classList.add("hidden");
+
+          setTimeout(() => {
+            if (content) content.classList.add("show");
+          }, 1000);
+        });
       });
     </script>
   </body>
