@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kartikeya | Portfolio</title>
+    <title>Kartikeya | Code. Design. Create.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link
@@ -22,18 +22,11 @@
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
       body {
         font-family: "Montserrat", sans-serif;
-      }
-      .sub_box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      iframe {
-        border-radius: 10px;
+        background-color: #10121b;
       }
     </style>
   </head>
-  <body class="bg-black text-white">
+  <body class="text-white">
     <nav>
       <div class="wrapper">
         <div class="logo">
@@ -64,7 +57,7 @@
               >Monkeytype</a
             >
           </li>
-          <li>
+          <li class="search_botton">
             <a href="#" onclick="focusSearchBar(event)">
               <i class="fa-solid fa-magnifying-glass"></i>
             </a>
@@ -78,8 +71,7 @@
     </nav>
 
     <section
-      class="flex-grow flex flex-col justify-center items-center text-center px-6"
-      style="height: calc(100vh - 4.5rem)"
+      class="flex-grow flex flex-col justify-center items-center text-center px-6 header"
     >
       <h2 class="text-6xl md:text-8xl font-bold mb-2 leading-tight">
         Hi, I'm Kartikeya
@@ -90,40 +82,67 @@
       <p class="text-zinc-400 text-base md:text-lg mb-5">
         If it can be coded, styled, typed, or tweaked — I’m on it.
       </p>
-      <div class="flex justify-center items-center space-x-6 text-2xl">
+
+      <div
+        class="flex flex-wrap justify-center items-center gap-4 md:gap-6 p-4"
+      >
         <a
           href="mailto:kartikeya30062009@gmail.com"
-          class="hover:text-blue-500 transition transform hover:scale-110"
+          class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
           title="Email me"
         >
-          <i class="fa-solid fa-envelope"></i>
+          <div
+            class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+          ></div>
+          <i
+            class="fa-solid fa-envelope text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+          ></i>
         </a>
+
         <a
           href="https://monkeytype.com/profile/Karitkeya"
           target="_blank"
-          class="hover:text-blue-500 transition transform hover:scale-110"
+          class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
           title="Typing profile"
         >
-          <i class="fa-solid fa-keyboard"></i>
+          <div
+            class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+          ></div>
+          <i
+            class="fa-solid fa-keyboard text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+          ></i>
         </a>
+
         <a
           href="https://github.com/KartikeyaLab"
           target="_blank"
-          class="hover:text-blue-500 transition transform hover:scale-110"
+          class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
           title="GitHub"
         >
-          <i class="fa-brands fa-github"></i>
+          <div
+            class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+          ></div>
+          <i
+            class="fa-brands fa-github text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+          ></i>
         </a>
 
         <a
           href="https://www.youtube.com/@clever-ways"
           target="_blank"
-          class="hover:text-blue-500 transition transform hover:scale-110"
-          title="Youtube"
+          class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
+          title="YouTube"
         >
-          <i class="fa-brands fa-youtube"></i>
+          <div
+            class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+          ></div>
+          <i
+            class="fa-brands fa-youtube text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+          ></i>
         </a>
       </div>
+
+      <div class="transparent_overlay"></div>
     </section>
 
     <section id="about" class="px-6 py-24 max-w-3xl mx-auto text-center">
@@ -132,17 +151,37 @@
       >
         About Me
       </h3>
-      <p class="text-zinc-500 mb-8 text-base">
+      <p class="dim_text mb-8 text-base">
         A quick glimpse into who I am and what I love doing.
       </p>
       <p class="text-zinc-400 text-lg leading-relaxed">
-        Hello, I’m Kartikeya. I have a passion for technology and work as a
-        computer programmer. I specialise in web development using HTML, CSS,
-        JavaScript, and React, with additional experience in C and Python.
-        Alongside coding, I also work in video editing and graphic design,
-        ensuring that my projects are both functional and visually appealing.
-        I’m also a fast typist, able to type up to 100+ words per minute, which
-        allows me to work efficiently and precisely.
+        Hello, my name is Kartikeya. I am a dedicated computer programmer with a
+        strong passion for technology and software development. I specialize in
+        front-end web development, working extensively with HTML5, CSS3
+        (including Flexbox and Grid), JavaScript, and modern frameworks like
+        React.js. I focus on building responsive, interactive, and accessible
+        user interfaces that suit the project’s needs.
+      </p>
+
+      <p class="text-zinc-400 text-lg leading-relaxed mt-6">
+        In addition to front-end development, I have experience with Python,
+        which I use for scripting, automation, and developing lightweight
+        back-end services. I’ve also worked with C to better understand
+        low-level programming concepts and system architecture.
+      </p>
+
+      <p class="text-zinc-400 text-lg leading-relaxed mt-6">
+        Outside of software development, I have a background in multimedia
+        production, particularly video editing, where I use DaVinci Resolve to
+        create and edit video content for my projects. I aim to combine my
+        technical skills with creativity to ensure my work is both functional
+        and visually appealing.
+      </p>
+
+      <p class="text-zinc-400 text-lg leading-relaxed mt-6">
+        I am also a fast typist, with a typing speed of over 100 words per
+        minute, which helps me work efficiently and maintain precision when
+        coding, debugging, and documenting.
       </p>
     </section>
 
@@ -153,14 +192,12 @@
         Clever Ways
       </h3>
 
-      <p class="text-zinc-500 mb-8 text-base">
-        See what I’ve created on YouTube.
-      </p>
-      <div id="videoContainer" class="space-y-8 grid gap-10 md:grid-cols-2">
+      <p class="dim_text mb-8 text-base">See what I’ve created on YouTube.</p>
+      <div id="videoContainer" class="space-y-8 grid gap-10 md:grid-cols">
         <!-- Put video here -->
 
         <div
-          class="glow-card bg-zinc-900 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden max-w-sm w-full mx-auto"
+          class="glow-card dark_background_color rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden max-w-sm w-full mx-auto"
           data-video-id="ezG4lemvy50"
         >
           <a href="https://www.youtube.com/watch?v=ezG4lemvy50" target="_blank">
@@ -205,7 +242,7 @@
       >
         Projects
       </h3>
-      <p class="text-zinc-500 text-center mb-8 text-base">
+      <p class="dim_text text-center mb-8 text-base">
         Some of the cool things I've built and worked on recently.
       </p>
       <div class="mb-8 text-center">
@@ -213,14 +250,14 @@
           type="text"
           id="searchInput"
           placeholder="Browse Projects"
-          class="w-full md:w-1/2 px-4 py-2 rounded-xl bg-zinc-800 border border-zinc-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full md:w-1/2 px-4 py-2 rounded-xl dark_background border border-zinc-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
       <div class="grid gap-10 md:grid-cols-2">
         <!-- Put code here -->
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Dictation</h4>
           <p class="text-zinc-400 mb-2">
@@ -228,19 +265,19 @@
             Text-to-Speech dictation, allowing users to listen to written
             content effortlessly.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: April 14, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: April 14, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -270,27 +307,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Bookshelf</h4>
           <p class="text-zinc-400 mb-2">
-            Bookshelf: A user-friendly web application built with HTML, CSS, and
-            JavaScript for organizing and showcasing your personal book
-            collection.
+            A web-based application for organizing and displaying books using
+            HTML, CSS, and JavaScript ( Bookshelf ).
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: April 12, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: April 12, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -320,26 +356,75 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
-          <h4 class="text-2xl font-semibold mb-2">Kartikeyadrive</h4>
+          <h4 class="text-2xl font-semibold mb-2">Kartikeya</h4>
           <p class="text-zinc-400 mb-2">
-            A web application, 'Kartikeyadrive', built with HTML, CSS, and
-            JavaScript, providing interactive user experience.
+            Kartikeya is a web development project primarily utilizing HTML,
+            CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: April 05, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: April 11, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
+              >JavaScript</span
+            >
+          </div>
+
+          <div class="flex flex-wrap gap-4 mt-4 items-center">
+            <a
+              href="https://github.com/KartikeyaLab/kartikeya"
+              target="_blank"
+              class="text-blue-400 hover:underline text-sm"
+              >View Project ↗</a
+            >
+            <a
+              href="https://github.com/KartikeyaLab/kartikeya/archive/refs/heads/main.zip"
+              target="_blank"
+              class="text-blue-400 hover:underline text-sm"
+              >Download ZIP ↗</a
+            >
+
+            <a
+              href="https://kartikeyalab.github.io/kartikeya/"
+              target="_blank"
+              class="text-blue-400 hover:underline text-sm"
+            >
+              Live Demo ↗
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Kartikeyadrive</h4>
+          <p class="text-zinc-400 mb-2">
+            'Kartikeyadrive' is a web application developed primarily with HTML,
+            CSS, and JavaScript.
+          </p>
+          <p class="dim_text text-sm mb-4">Published: April 05, 2025</p>
+
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
+            <span
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
+              >HTML</span
+            >
+            <span
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
+              >CSS</span
+            >
+            <span
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -369,26 +454,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Travel Video Background</h4>
           <p class="text-zinc-400 mb-2">
-            An interactive HTML/CSS/JavaScript project showcasing various travel
-            video backdrops to use as customizable page backgrounds.
+            Interactive travel experience: A web project offering dynamic video
+            backgrounds using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -418,26 +503,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Trigya Travels</h4>
           <p class="text-zinc-400 mb-2">
-            Trigya Travels is an interactive travel website built using HTML,
-            CSS, and JavaScript.
+            'Trigya Travels' is an interactive travel web application primarily
+            built using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -467,26 +552,27 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Travel Website</h4>
           <p class="text-zinc-400 mb-2">
-            A web application project showcasing an interactive travel website
-            built primarily with HTML, CSS, and JavaScript.
+            This 'Travel Website' is an interactive web platform built primarily
+            with HTML, CSS, and JavaScript, designed to provide travel-related
+            information and services.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -516,26 +602,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Text Underline</h4>
           <p class="text-zinc-400 mb-2">
-            A simple HTML/CSS/JavaScript project that allows users to underline
-            text for web development purposes.
+            This GitHub project, named 'Text Underline', provides solutions to
+            underline text using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -565,26 +651,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Text Portrait</h4>
           <p class="text-zinc-400 mb-2">
             Text Portrait is an interactive web application that creates visual
-            portraits from text using HTML, CSS, and JavaScript.
+            portraits using text styled with HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -614,26 +700,25 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Text Animation</h4>
           <p class="text-zinc-400 mb-2">
-            Text Animation is an interactive project that showcases dynamic
-            animations of text using a combination of HTML, CSS, and JavaScript.
+            Interactive text animation using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -663,26 +748,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">S23 Ultra Clone</h4>
           <p class="text-zinc-400 mb-2">
-            S23 Ultra Clone is an HTML/CSS/JavaScript project designed to create
-            ultra-fast clones of website structures.
+            'S23 Ultra Clone' is a web project featuring interactive user
+            interfaces using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -712,26 +797,27 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Salon Website</h4>
           <p class="text-zinc-400 mb-2">
-            A web project that showcases a salon's services using HTML, CSS, and
-            JavaScript for design and interaction.
+            A 'Salon Website' project is an HTML/CSS/JavaScript solution for
+            creating a stylish, user-friendly website designed to showcase
+            various salon services and booking options.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -761,27 +847,28 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Responsive Header</h4>
           <p class="text-zinc-400 mb-2">
-            A GitHub project for building a dynamic, adaptable header using
-            HTML, CSS, and JavaScript to ensure compatibility across various
-            screen sizes.
+            A 'Responsive Header' GitHub project is an open-source collection of
+            HTML, CSS, and JavaScript files that aim to create adaptable header
+            layouts for web applications, ensuring optimal display across
+            various devices and screen sizes.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -811,27 +898,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Portfolio Website</h4>
           <p class="text-zinc-400 mb-2">
-            This 'Portfolio Website' project is an interactive personal showcase
-            built with HTML, CSS, and JavaScript for presenting one's work and
-            skills to potential clients or employers.
+            A personal portfolio website showcasing projects built using HTML,
+            CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -861,28 +947,28 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Page Not Find</h4>
           <p class="text-zinc-400 mb-2">
-            'Page Not Found' is a web application primarily constructed with
-            HTML, CSS, and JavaScript, intended to display a customizable error
-            message when an incorrect or non-existent page is accessed within a
-            website.
+            This 'Page Not Find' GitHub project appears to be a web development
+            solution, primarily focusing on front-end technologies such as HTML,
+            CSS, and JavaScript, likely designed for creating and customizing
+            customized 404 error pages.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -912,26 +998,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Oppo Website Clone</h4>
           <p class="text-zinc-400 mb-2">
-            Oppo Website Clone: An open-source project for building a replica of
-            Oppo's official website, primarily using HTML, CSS, and JavaScript.
+            Clone of Oppo's website built using HTML, CSS, and JavaScript for
+            web development practice.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -961,26 +1047,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Oneplus Clone</h4>
           <p class="text-zinc-400 mb-2">
-            A personal project designed to replicate the user interface of
-            OnePlus devices, utilizing HTML, CSS, and JavaScript.
+            Oneplus Clone is a web project that aims to replicate the design and
+            functionality of a OnePlus website using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1010,26 +1096,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Header Design</h4>
           <p class="text-zinc-400 mb-2">
-            Header Design: A project focused on creating attractive and
-            responsive header layouts using HTML, CSS, and JavaScript.
+            A GitHub project for designing customizable website headers using
+            HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1059,27 +1145,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Neonbutton</h4>
           <p class="text-zinc-400 mb-2">
-            'Neonbutton' is an interactive web component library that creates
-            vibrant, futuristic neon-style buttons using HTML, CSS, and
-            JavaScript.
+            'Neonbutton' is a customizable neon-style HTML/CSS/JavaScript button
+            library.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1109,26 +1194,27 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Navigation Bar</h4>
           <p class="text-zinc-400 mb-2">
-            A navigation bar solution primarily built with HTML, CSS, and
-            JavaScript.
+            A Navigation Bar project offers an interactive user interface
+            composed primarily of HTML, CSS, and JavaScript elements to enhance
+            website navigation experiences.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1158,26 +1244,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Music Website</h4>
           <p class="text-zinc-400 mb-2">
-            A web application for playing music, built using HTML, CSS, and
-            JavaScript.
+            A user-friendly Music Website that showcases music content, designed
+            using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1207,27 +1293,27 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Modern Website</h4>
           <p class="text-zinc-400 mb-2">
-            This 'Modern Website' project showcases a contemporary web design,
-            primarily utilizing HTML, CSS, and JavaScript technologies to
-            deliver an engaging user experience.
+            This 'Modern Website' GitHub project appears to be focused on
+            creating contemporary web designs using HTML, CSS, and JavaScript
+            technologies.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1257,26 +1343,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Iphone14 Clone</h4>
           <p class="text-zinc-400 mb-2">
-            A web-based clone of Apple's iPhone 14 model, built using HTML, CSS,
-            and JavaScript.
+            Clone of an iPhone 14 user interface built with HTML, CSS, and
+            JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1306,26 +1392,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Background Video</h4>
           <p class="text-zinc-400 mb-2">
-            A web project showcasing a dynamic background video using HTML, CSS,
-            and JavaScript.
+            An HTML/CSS/JavaScript project that implements a customizable
+            background video effect.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1355,26 +1441,27 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Website Header</h4>
           <p class="text-zinc-400 mb-2">
-            A GitHub project focused on creating dynamic and responsive website
-            headers using HTML, CSS, and JavaScript.
+            This GitHub project, named 'Website Header', is a frontend solution
+            focused on creating visually appealing and responsive web headers
+            using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1404,27 +1491,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Zflip 4</h4>
           <p class="text-zinc-400 mb-2">
-            A user-friendly web application utilizing HTML, CSS, and JavaScript
-            for card-based content flipping and navigation in version 4 (Zflip
-            4).
+            Interactive web page flipbook using HTML, CSS, and JavaScript in
+            version 4 of the Zflip project.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1454,26 +1540,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Websiteheader Green</h4>
           <p class="text-zinc-400 mb-2">
-            A web project featuring a dynamic and customizable green website
-            header primarily built with HTML, CSS, and JavaScript.
+            Websiteheader Green is an HTML, CSS, and JavaScript project focused
+            on creating customizable website headers.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1503,26 +1589,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Galaxy Book3</h4>
           <p class="text-zinc-400 mb-2">
-            Galaxy Book3 is an interactive web application, primarily built
+            Galaxy Book3 is an interactive web application developed primarily
             using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1552,26 +1638,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Emoji Search</h4>
           <p class="text-zinc-400 mb-2">
             Emoji Search is an interactive web application that allows users to
-            search emojis using HTML, CSS, and JavaScript.
+            search for various emojis using their names or keywords.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1601,26 +1687,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Car Website</h4>
           <p class="text-zinc-400 mb-2">
-            A user-friendly car shopping website built with HTML, CSS, and
+            A web application for managing car information using HTML, CSS, and
             JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1650,27 +1736,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Button Ripple Effect</h4>
           <p class="text-zinc-400 mb-2">
-            A Button Ripple Effect project showcases an interactive ripple
-            animation effect when clicking on buttons using HTML, CSS, and
-            JavaScript.
+            Implement a visually appealing ripple effect on interactive buttons
+            using HTML, CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1700,27 +1785,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Windows11 Clone</h4>
           <p class="text-zinc-400 mb-2">
-            Windows11 Clone: An open-source web project that recreates the
-            interface of Microsoft's Windows 11 operating system using HTML,
-            CSS, and JavaScript.
+            A Windows 11-inspired interface built using HTML, CSS, and
+            JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1750,26 +1834,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Animated Website</h4>
           <p class="text-zinc-400 mb-2">
-            An interactive webpage showcasing dynamic visuals using HTML, CSS,
-            and JavaScript.
+            Animated Website is an interactive webpage utilizing HTML, CSS, and
+            JavaScript to create visually engaging and dynamic web content.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1799,27 +1883,27 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Animmated Header</h4>
           <p class="text-zinc-400 mb-2">
-            Animated Header is an interactive web design project that showcases
-            dynamically moving header elements, implemented primarily using
-            HTML, CSS, and JavaScript.
+            Animated Header is an interactive web design project using HTML,
+            CSS, and JavaScript, featuring dynamic visual effects for header
+            elements.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1849,27 +1933,26 @@
         </div>
 
         <div
-          class="project-card glow-card bg-zinc-900 p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
         >
           <h4 class="text-2xl font-semibold mb-2">Dwps Ashta</h4>
           <p class="text-zinc-400 mb-2">
-            The 'Dwps Ashta' GitHub project appears to be an HTML, CSS, and
-            JavaScript web development project, potentially featuring a set of
-            customizable components or templates for website design.
+            'Dwps Ashta' is a web development project primarily utilizing HTML,
+            CSS, and JavaScript.
           </p>
-          <p class="text-zinc-500 text-sm mb-4">Published: March 15, 2025</p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
 
           <div class="flex flex-wrap gap-2 text-sm mb-4">
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >HTML</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >CSS</span
             >
             <span
-              class="px-3 py-1 bg-zinc-800 rounded-full border border-zinc-600"
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
               >JavaScript</span
             >
           </div>
@@ -1898,41 +1981,92 @@
           </div>
         </div>
 
+        <div
+          class="project-card glow-card dark_background_color p-6 rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden"
+        >
+          <h4 class="text-2xl font-semibold mb-2">Madeforyou</h4>
+          <p class="text-zinc-400 mb-2">
+            A user-oriented web development project, 'Madeforyou', features a
+            blend of HTML, CSS, and JavaScript.
+          </p>
+          <p class="dim_text text-sm mb-4">Published: March 15, 2025</p>
+
+          <div class="flex flex-wrap gap-2 text-sm mb-4">
+            <span
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
+              >HTML</span
+            >
+            <span
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
+              >CSS</span
+            >
+            <span
+              class="px-3 py-1 dark_background clickable_button rounded-full border border-zinc-600"
+              >JavaScript</span
+            >
+          </div>
+
+          <div class="flex flex-wrap gap-4 mt-4 items-center">
+            <a
+              href="https://github.com/KartikeyaLab/MadeForYou"
+              target="_blank"
+              class="text-blue-400 hover:underline text-sm"
+              >View Project ↗</a
+            >
+            <a
+              href="https://github.com/KartikeyaLab/MadeForYou/archive/refs/heads/main.zip"
+              target="_blank"
+              class="text-blue-400 hover:underline text-sm"
+              >Download ZIP ↗</a
+            >
+
+            <a
+              href="https://kartikeyalab.github.io/MadeForYou/"
+              target="_blank"
+              class="text-blue-400 hover:underline text-sm"
+            >
+              Live Demo ↗
+            </a>
+          </div>
+        </div>
+
         <!-- -->
       </div>
       <div class="flex justify-center mt-8">
         <button
           id="showMoreBtn"
-          class="bg-zinc-800 text-white px-6 py-2 rounded-xl border border-zinc-600 hover:ring-2 hover:ring-blue-500 transition"
+          class="dark_background text-white px-6 py-2 rounded-xl border border-zinc-600 hover:ring-2 hover:ring-blue-500 transition"
         >
           Show More
         </button>
       </div>
     </section>
 
-    <section id="contact" class="px-6 py-24 max-w-6xl mx-auto">
+    <section id="contact" class="px-4 py-16 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       <h3
-        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-4 text-white"
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-2 sm:mb-4"
       >
         Wanna talk?
       </h3>
-      <p class="text-zinc-500 text-center mb-8 text-base">
+      <p class="dim_text text-center mb-10 text-sm sm:text-base">
         Have an idea or just want to say hi? Drop me a message below.
       </p>
-      <div
-        class="bg-zinc-900 rounded-2xl shadow-lg overflow-hidden grid md:grid-cols-2"
-      >
-        <div class="p-10">
-          <form id="contactForm" class="space-y-6">
-            <div>
-              <input type="hidden" name="_captcha" value="false" />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://kartikeyalab.github.io/thank/"
-              />
-              <input type="hidden" name="_template" value="table" />
 
+      <div
+        class="dark_background_color rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+      >
+        <!-- Form -->
+        <div class="w-full md:w-1/2 p-6 sm:p-10">
+          <form id="contactForm" class="space-y-6">
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://kartikeyalab.github.io/thank/"
+            />
+            <input type="hidden" name="_template" value="table" />
+
+            <div>
               <label class="block text-sm mb-1 text-zinc-400">Full Name</label>
               <input
                 type="text"
@@ -1940,7 +2074,7 @@
                 id="name"
                 placeholder="Your Name"
                 required
-                class="w-full px-4 py-3 bg-zinc-800 rounded-lg border border-zinc-700 placeholder:text-zinc-500 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                class="w-full px-4 py-3 dark_background rounded-lg border border-zinc-700 text-white placeholder:text-zinc-400 placeholder:text-sm placeholder:italic focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </div>
 
@@ -1952,7 +2086,7 @@
                 id="email"
                 placeholder="example@gmail.com"
                 required
-                class="w-full px-4 py-3 bg-zinc-800 rounded-lg border border-zinc-700 placeholder:text-zinc-500 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                class="w-full px-4 py-3 dark_background rounded-lg border border-zinc-700 text-white placeholder:text-zinc-400 placeholder:text-sm placeholder:italic focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </div>
 
@@ -1961,34 +2095,35 @@
               <textarea
                 name="message"
                 placeholder="Let’s make stuff that makes our Wi-Fi proud."
-                rows="5"
+                rows="4"
                 required
-                class="w-full px-4 py-3 bg-zinc-800 rounded-lg border border-zinc-700 placeholder:text-zinc-500 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                class="w-full px-4 py-3 dark_background rounded-lg border border-zinc-700 text-white placeholder:text-zinc-400 placeholder:text-sm placeholder:italic focus:ring-2 focus:ring-blue-500 focus:outline-none"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              class="w-full bg-blue-600 hover:bg-blue-500 transition px-6 py-3 rounded-lg text-white font-semibold"
+              class="w-full button_background transition px-6 py-3 rounded-lg text-white font-semibold flex items-center justify-center"
             >
-              Send Message
+              <span>Send Message</span>
+              <div class="loader ml-2" id="loader"></div>
             </button>
           </form>
         </div>
 
+        <!-- Quote -->
         <div
-          class="from-zinc-800 to-black p-10 flex flex-col justify-center items-center text-center text-zinc-400"
+          class="w-full md:w-1/2 p-6 sm:p-10 from-zinc-800 to-black flex items-center justify-center text-center text-zinc-300"
         >
           <div class="max-w-md">
-            <p class="text-lg leading-relaxed text-zinc-300">
+            <p class="text-base sm:text-lg leading-relaxed">
               Everyone is friendly, but you have to go first.
             </p>
-            <p class="italic">~Let's have a conversation</p>
+            <p class="italic mt-2">~Let's have a conversation</p>
           </div>
         </div>
       </div>
     </section>
-
     <footer
       class="text-center py-6 text-zinc-600 text-sm border-t border-zinc-800"
     >
@@ -2134,6 +2269,26 @@
         event.preventDefault();
         document.getElementById("searchInput").focus();
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const button = form.querySelector("button[type='submit']");
+        const loader = document.getElementById("loader");
+
+        loader.style.display = "none";
+
+        form.addEventListener("submit", function (e) {
+          loader.style.display = "inline-block";
+          button.disabled = true;
+          button.classList.add("opacity-50", "cursor-not-allowed");
+
+          setTimeout(() => {
+            loader.style.display = "none";
+            button.disabled = false;
+            button.classList.remove("opacity-50", "cursor-not-allowed");
+          }, 2000);
+        });
+      });
     </script>
   </body>
 </html>
