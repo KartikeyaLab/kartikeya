@@ -9,10 +9,9 @@ h3 {
   font-family: "Bethasia";
 }
 *::selection {
-  background-color: #4263a4;
-  color: #fff;
+  background-color: #3b4a69;
+  color: #e0e0e0;
 }
-
 h4 {
   color: #ffffff;
 }
@@ -87,15 +86,40 @@ h4 {
   overflow: hidden;
   background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.807),
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.627)
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
     ),
-    url("Media/Background.png");
-  background-position: bottom;
+    url("./Media/Background.webp");
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
+
+  background-color: #000;
+  background-blend-mode: normal;
+
+  image-rendering: auto;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.footer-section {
+  width: 100%;
+  position: relative;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./Media/Background.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* more reliable on all devices */
+  background-color: #000; /* fallback */
+  background-blend-mode: normal;
 }
 
 .glow-card::before {
@@ -104,12 +128,15 @@ h4 {
   top: var(--y, 50%);
   left: var(--x, 50%);
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.015) 60%,
+    circle at center,
+    hsla(0, 0%, 100%, 0.18) 0%,
+    hsla(0, 0%, 100%, 0.1) 20%,
+    hsla(0, 0%, 100%, 0.06) 40%,
+    hsla(0, 0%, 100%, 0.03) 60%,
+    hsla(0, 0%, 100%, 0.01) 80%,
     transparent 100%
   );
   opacity: 0;
@@ -231,15 +258,15 @@ nav .wrapper {
     left: -100%;
     background: #10121b;
     display: block;
-    padding: 40px 10px; /* Slightly reduced padding for more space */
-    line-height: 50px; /* Increase line-height for better spacing */
+    padding: 40px 10px;
+    line-height: 50px;
     overflow-y: auto;
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
     transition: all 0.3s ease;
   }
 
   ::-webkit-scrollbar {
-    width: 8px; /* Slim scrollbar */
+    width: 8px;
   }
   ::-webkit-scrollbar-track {
     background: #18181800;
@@ -258,19 +285,16 @@ nav .wrapper {
     display: block;
   }
 
-  /* Increased gap between list items */
   .nav-links li {
     margin: 25px 40px;
-    /* Increased margin for more space */
   }
 
-  /* Reduced font size and better readability */
   .nav-links li a {
     padding: 0 15px;
     display: block;
     font-size: 1rem;
 
-    line-height: 2.75; /* More comfortable line height for better readability */
+    line-height: 2.75;
   }
 }
 
@@ -398,4 +422,42 @@ nav input {
   to {
     opacity: 0;
   }
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  filter: blur(4px);
+  transition: opacity 1.2s ease-out,
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), filter 1.2s ease-out;
+  will-change: opacity, transform, filter;
+}
+
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.project-card:hover {
+  transform: scale(1.01);
+}
+
+.show-more-btn {
+  background-color: #4263a4;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid #7f7f7f61;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+
+.show-more-btn:hover {
+  background-color: #35588a;
+  transform: scale(1.05);
+}
+
+.show-more-btn:focus {
+  outline: none;
 }
