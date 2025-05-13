@@ -4076,30 +4076,31 @@
         btn.style.display = total > defaultVisible ? "block" : "none";
       }
 
-      function setupSearch() {
-        const searchInput = document.getElementById("searchInput");
-        const btn = document.getElementById("showMoreBtn");
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        const cards = document.querySelectorAll(".project-card");
+        let matches = 0;
 
-        searchInput.addEventListener("input", () => {
-          const query = searchInput.value.trim().toLowerCase();
-          const cards = document.querySelectorAll(".project-card");
-          let matches = 0;
+        cards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          const isVisible = text.includes(query);
 
-          cards.forEach((card) => {
-            const text = card.textContent.toLowerCase();
-            const isVisible = text.includes(query);
-            card.style.display = isVisible ? "block" : "none";
-            if (isVisible) matches++;
-          });
-
-          if (query === "") {
-            isExpanded = false;
-            applyInitialView();
+          if (isVisible) {
+            card.style.display = "block";
+            card.classList.add("show");
+            matches++;
           } else {
-            btn.style.display = "none";
+            card.style.display = "none";
+            card.classList.remove("show");
           }
         });
-      }
+
+        if (query === "") {
+          applyInitialView();
+        } else {
+          btn.style.display = "none";
+        }
+      });
 
       function setupNav() {
         const navLinks = document.querySelectorAll(".nav-link");
