@@ -1,6 +1,15 @@
 @font-face {
   font-family: "Bethasia";
-  src: url(Bethasia.otf);
+  src: url("Bethasia.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TheSomething";
+  src: url("TheSomething.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1,
@@ -173,10 +182,11 @@ nav {
   position: fixed;
   z-index: 99;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.164);
-  backdrop-filter: blur(32px) saturate(50%);
-  -webkit-backdrop-filter: blur(32px) saturate(150%);
-  border-bottom: 1px solid rgba(63, 63, 70, 0.5);
+  background: #00000019;
+  backdrop-filter: blur(24px);
+  -tw-border-opacity: 1;
+  border-color: rgb(39 39 42 / var(--tw-border-opacity, 1));
+  border-bottom-width: 1px;
 }
 
 nav .wrapper {
@@ -243,86 +253,59 @@ nav .wrapper {
   top: 10px;
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 970px) {
   .search_botton {
     display: none;
   }
-
   .wrapper .btn {
     display: block;
   }
-
   .wrapper .nav-links {
     position: fixed;
-    top: 0;
-    left: 0;
     height: 100vh;
     width: 100%;
     max-width: 650px;
+    top: 0;
+    left: -100%;
     background: #10121b;
-    display: flex;
-    flex-direction: column;
-    padding: 40px 65px;
+    display: block;
+    padding: 40px 10px;
     line-height: 50px;
     overflow-y: auto;
-    z-index: 999;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
+  }
 
-    transform: translateX(-100%) scale(0.98);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1),
-      opacity 0.5s ease-in-out;
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #18181800;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3a3b3c00;
   }
 
   #menu-btn:checked ~ .nav-links {
-    transform: translateX(0%) scale(1);
-    opacity: 1;
-    pointer-events: auto;
+    left: 0%;
   }
-
   #menu-btn:checked ~ .btn.menu-btn {
     display: none;
   }
-
   #close-btn:checked ~ .btn.menu-btn {
     display: block;
   }
 
   .nav-links li {
-    margin: 15px 0;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeSlideIn 0.5s forwards ease-out;
-    animation-delay: calc(var(--i) * 0.08s);
+    margin: 25px 40px;
   }
 
   .nav-links li a {
     padding: 0 15px;
-    font-size: 1rem;
     display: block;
+    font-size: 1rem;
+
     line-height: 2.75;
-    color: #fff;
-    transition: color 0.2s ease;
-  }
-
-  @keyframes fadeSlideIn {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: transparent;
   }
 }
 
@@ -489,4 +472,9 @@ nav input {
   to {
     opacity: 0;
   }
+}
+.sign {
+  font-family: "TheSomething";
+  font-size: clamp(6rem, 10vw, 8rem);
+  color: #a1a1aa;
 }

@@ -187,7 +187,6 @@
       <div class="spinner"></div>
       <div id="loading-circle">
         <div class="spinner"></div>
-        <div id="quote" class="quote-text"></div>
       </div>
     </div>
 
@@ -3941,13 +3940,7 @@
         >
           With love and quiet awe,
         </p>
-        <div>
-          <img
-            src="Media/sign.webp"
-            alt="Sign"
-            class="w-48 md:w-56 lg:w-64 h-auto mx-auto"
-          />
-        </div>
+        <div class="sign">Kartikeya</div>
       </section>
 
       <footer
@@ -3990,9 +3983,10 @@
         </div>
 
         <div
-          class="text-center py-6 text-zinc-400 text-sm border-t border-zinc-700"
+          class="max-w-7xl mx-auto px-4 py-6 text-center text-sm tracking-wider text-zinc-400"
         >
-          © <span id="year"></span> Kartikeya. All rights reserved.
+          © <span id="year"></span>
+          Kartikeya. All rights reserved.
         </div>
       </footer>
     </div>
@@ -4217,57 +4211,7 @@
         });
       }
 
-      const quotes = [
-        "Good things don’t rush… but they sparkle!",
-        "Hold tight, we’re dusting off some magic!",
-        "Crafting smiles, one second at a time!",
-        "Just a tick—your joy is almost here!",
-        "Like a butterfly emerging… almost there!",
-        "Patience, please—your happiness is in the oven!",
-        "Great things take time… like your favorite cake!",
-        "Baking up some fun… almost done!",
-        "One moment… we’re adding the sparkle!",
-        "Hang tight—dreams are loading!",
-        "Hold tight, magic’s brewing!",
-        "Almost there, just adding stardust!",
-        "Creating smiles, one moment at a time!",
-        "Just a sec… dreams in progress!",
-        "A masterpiece is loading!",
-        "Hang tight, joy is coming!",
-        "Patience… a little spark is being made!",
-        "Your perfect moment is almost here!",
-        "Wait for it… magic’s on its way!",
-        "Almost ready… sunshine in the mix!",
-      ];
-
-      let quoteIndex = 0;
-      const quoteEl = document.getElementById("quote");
-
-      function showNextQuote() {
-        if (!quoteEl) return;
-
-        quoteEl.classList.remove("fade-in");
-        quoteEl.classList.add("fade-out");
-
-        setTimeout(() => {
-          quoteIndex = (quoteIndex + 1) % quotes.length;
-          quoteEl.textContent = quotes[quoteIndex];
-          quoteEl.classList.remove("fade-out");
-          quoteEl.classList.add("fade-in");
-        }, 300);
-      }
-
-      function showRandomQuote() {
-        if (quoteEl) {
-          const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-          quoteEl.textContent = randomQuote;
-          quoteEl.classList.add("fade-in");
-        }
-      }
-
       window.onload = () => {
-        showRandomQuote();
-
         const loadingCircle = document.getElementById("loading-circle");
         const content = document.querySelector(".container_universal_hidden");
 
@@ -4276,8 +4220,6 @@
         setTimeout(() => {
           if (content) content.classList.add("show");
         }, 500);
-
-        setInterval(showNextQuote, 3000);
       };
 
       function truncateText(element, maxLength) {
