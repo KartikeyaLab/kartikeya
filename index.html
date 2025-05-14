@@ -142,6 +142,45 @@
         background-color: #10121b;
       }
     </style>
+    <style>
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+
+      .glass-animated {
+        position: relative;
+        background: linear-gradient(
+          130deg,
+          rgba(255, 255, 255, 0.05) 0%,
+          rgba(255, 255, 255, 0.1) 25%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.1) 75%,
+          rgba(255, 255, 255, 0.05) 100%
+        );
+        background-size: 400% 100%;
+        animation: shimmer 10s ease-in-out infinite;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      }
+
+      .glass-animated:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .fade-element {
+        opacity: 1;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    </style>
   </head>
   <body class="text-white">
     <div id="loading-circle" class="loading-circle">
@@ -172,14 +211,6 @@
             <li><a href="#contact" class="nav-link">Contact</a></li>
 
             <li>
-              <a
-                href="https://kartikeyalab.github.io/PortfolioBuilder/"
-                class="nav-link"
-                >Portfolio Builder</a
-              >
-            </li>
-
-            <li>
               <a href="https://github.com/KartikeyaLab" target="_blank"
                 >Github</a
               >
@@ -192,6 +223,13 @@
             <li>
               <a href="https://monkeytype.com/profile/Karitkeya" target="_blank"
                 >Monkeytype</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://kartikeyalab.github.io/PortfolioBuilder/"
+                class="nav-link"
+                >Portfolio Builder</a
               >
             </li>
             <li class="search_botton">
@@ -214,15 +252,15 @@
       </nav>
 
       <section
-        class="flex-grow flex flex-col justify-center items-center text-center px-6 header"
+        class="flex-grow flex flex-col justify-center items-center text-center px-6 header fade-element"
       >
         <h2 class="text-6xl md:text-8xl font-bold mb-2 leading-none">
           Hi, I'm Kartikeya
         </h2>
-        <p class="text-zinc-400 text-base md:text-lg">
+        <p class="text-zinc-400 text-base md:text-lg fade-element">
           Developer · Designer · Typist · Editor
         </p>
-        <p class="text-zinc-400 text-base md:text-lg mb-5">
+        <p class="text-zinc-400 text-base md:text-lg fade-element">
           If it can be coded, styled, typed, or tweaked — I’m on it.
         </p>
 
@@ -286,12 +324,12 @@
         </div>
 
         <div
-          class="flex flex-wrap justify-center items-center gap-4 md:gap-6 p-4"
+          class="flex flex-wrap justify-center items-center gap-4 md:gap-6 p-4 rounded-xl"
         >
           <a
             href="https://kartikeyalab.github.io/PortfolioBuilder/"
             title="Build Your Portfolio"
-            class="group relative inline-flex items-center justify-center px-8 py-3 rounded-xl bg-white/10 border border-white/30 backdrop-blur-lg shadow-lg transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-2xl"
+            class="group relative inline-flex items-center justify-center px-8 py-3 rounded-xl glass-animated transition-all duration-300 hover:scale-105"
           >
             <span
               class="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent to-white/20 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
@@ -303,7 +341,6 @@
             </span>
           </a>
         </div>
-
         <div class="transparent_overlay"></div>
       </section>
 
@@ -365,9 +402,8 @@
         <p class="dim_text mb-8 text-base">See what I’ve created on YouTube.</p>
         <div id="videoContainer" class="space-y-8 grid gap-10 md:grid-cols">
           <!-- Put video here -->
-
           <div
-            class="glow-card dark_background_color rounded-2xl shadow-md hover:ring-1 hover:ring-zinc-700 transition-all relative overflow-hidden max-w-sm w-full mx-auto"
+            class="dark_background glow-card rounded-3xl shadow-lg hover:shadow-xl hover:ring-1 hover:ring-zinc-700 transition-all duration-300 relative overflow-hidden max-w-sm w-full mx-auto group"
             data-video-id="ezG4lemvy50"
           >
             <a
@@ -376,36 +412,45 @@
             >
               <img
                 src="https://i.ytimg.com/vi/ezG4lemvy50/hqdefault.jpg"
-                alt="What Really Happened to Elon?"
-                class="w-full h-48 object-cover"
+                alt="Why is this not the same Elon?"
+                class="w-full h-52 object-cover rounded-t-3xl transition-transform duration-300 group-hover:scale-105"
               />
             </a>
-            <div class="p-6">
-              <h4
-                class="text-2xl font-semibold mb-2 text-white line-clamp-2 text-left"
-              >
-                What Really Happened to Elon?
+            <div class="p-5">
+              <h4 class="text-xl font-bold text-white mb-2 line-clamp-2">
+                Why is this not the same Elon?
               </h4>
-              <p class="text-zinc-400 mb-3 text-sm line-clamp-3 text-left">
+              <p class="text-zinc-400 text-sm mb-4 line-clamp-4">
                 Before SpaceX. Before Tesla. Before the billions. This
                 documentary takes you back to where it all began—the childhood
                 of Elon Musk. Journey through the early life of one of the most
                 influential innovators of our time, from his curious beginnings
                 in South Africa to the sparks of ambition that would one day
-                change the world 🌺 Timestamps: 00:00 Prologue 01:50 The Story
-                02:10 Childhood 03:01 Visionaries 03:53 Role Models 04:24
-                Epilogue
+                change the world 🌺
               </p>
-
               <a
                 href="https://www.youtube.com/watch?v=ezG4lemvy50"
                 target="_blank"
-                class="text-blue-400 hover:underline text-sm font-medium text-left block mt-2"
-                >Watch Video ↗</a
+                class="inline-flex items-center text-blue-400 hover:underline text-sm font-medium"
               >
+                Watch Video
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 ml-1 transition-transform duration-200 group-hover:translate-x-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
-
           <!-- -->
         </div>
       </section>
@@ -3922,7 +3967,7 @@
             >
               About Me
             </h2>
-            <p class="text-zinc-400 text-base md:text-lg leading-snug mt-4">
+            <p class="text-zinc-400 text-base md:text-lg leading-loose mt-4">
               I’m Kartikeya, a programmer and typist, skilled in front-end
               development (HTML, CSS, JavaScript, React) and Python. I also have
               experience in C and video editing
@@ -3935,7 +3980,7 @@
             >
               Wanna talk?
             </h2>
-            <p class="text-zinc-400 text-base md:text-lg leading-snug mt-4">
+            <p class="text-zinc-400 text-base md:text-lg leading-loose mt-4">
               Let’s connect and create something amazing together. Feel free to
               reach out to me here
               <a href="#contact" class="underline">contact</a>. I’m open to new
@@ -4026,7 +4071,6 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         applyInitialView();
-        setupSearch();
         setupNav();
       });
 
@@ -4110,6 +4154,12 @@
           });
         });
       }
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("close-btn").checked = true;
+        });
+      });
 
       function focusSearchBar(event) {
         event.preventDefault();
@@ -4244,6 +4294,33 @@
       descriptionElements.forEach((element) => {
         truncateText(element, 150);
       });
+
+      let lastScrollY = window.scrollY;
+
+      function updateFadeOpacity() {
+        const elements = document.querySelectorAll(".fade-element");
+        const currentScrollY = window.scrollY;
+        const scrollingUp = currentScrollY < lastScrollY;
+
+        elements.forEach((el) => {
+          const scrollOffset = currentScrollY;
+
+          let opacity;
+          if (scrollingUp) {
+            opacity = Math.min(1, (250 - scrollOffset) / 80);
+          } else {
+            opacity = Math.max(0, (250 - scrollOffset) / 80);
+          }
+
+          el.style.opacity = opacity.toFixed(2);
+        });
+
+        lastScrollY = currentScrollY;
+      }
+
+      window.addEventListener("scroll", updateFadeOpacity);
+      window.addEventListener("resize", updateFadeOpacity);
+      document.addEventListener("DOMContentLoaded", updateFadeOpacity);
     </script>
   </body>
 </html>
