@@ -1,13 +1,19 @@
 @font-face {
   font-family: "Bethasia";
-  src: url("Bethasia.otf") format("opentype");
+  src: url("Font/Bethasia.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TheSomething";
-  src: url("TheSomething.otf") format("opentype");
+  src: url("Font/TheSomething.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dream Avenue";
+  src: url("Font/Dream\ Avenue.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
@@ -253,7 +259,7 @@ nav .wrapper {
   top: 10px;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1160px) {
   .search_botton {
     display: none;
   }
