@@ -37,7 +37,7 @@ Want to make it your own? Here's how:
 
 ## 🧑‍💻 Connect with the Creator
 
-**Kartikeya**
+**Kartikeya Lab**
 
 * [GitHub](https://github.com/kartikeyalab)
 * [My Portfolio](http://kartikeyalab.github.io/kartikeya)
