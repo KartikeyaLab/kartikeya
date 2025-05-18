@@ -1,4 +1,4 @@
-# Welcome to My Digital Canvas 🎨
+# Hi, I'm Kartikeya
 
 This repository houses the code for my personal portfolio website, a space where I showcase my journey, creations, and expertise in the realms of web development and design. Think of it as my interactive resume and creative playground!
 
