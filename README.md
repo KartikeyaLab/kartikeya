@@ -2,6 +2,8 @@
 
 This repository houses the code for my personal portfolio website, a space where I showcase my journey, creations, and expertise in the realms of web development and design. Think of it as my interactive resume and creative playground!
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/KartikeyaLab/portfolio-builder/graphs/commit-activity)
+
 ---
 
 ## 🚀 Explore the Live Site
