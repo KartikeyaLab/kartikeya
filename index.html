@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kartikeya | Where Ideas Get a URL</title>
+    <title>Kartikeya’s Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link
@@ -185,10 +185,7 @@
   </head>
   <body class="text-white">
     <div id="loading-circle" class="loading-circle">
-      <div class="spinner"></div>
-      <div id="loading-circle">
-        <div class="spinner"></div>
-      </div>
+      <div class="elegant-spinner"></div>
     </div>
 
     <div class="container_universal_hidden">
@@ -358,7 +355,7 @@
           <a
             target="_blank"
             href="https://kartikeya.onrender.com/"
-            class="glow-card relative rounded-[2.5rem] p-10 border border-white/10 backdrop-blur-2xl overflow-hidden transition-all duration-300 transform hover:scale-[1.015] bg-white/5"
+            class="glow-card relative rounded-[2.5rem] p-10 border border-white/10 bg-white/5 backdrop-blur-2xl backdrop-saturate-90 overflow-hidden transition-all duration-300 transform hover:scale-[1.015] ring-1 ring-inset ring-white/5"
           >
             <div class="absolute top-6 right-6 z-10">
               <span
@@ -369,11 +366,11 @@
             </div>
 
             <div class="relative z-10">
-              <h2
+              <h4
                 class="text-white text-3xl sm:text-4xl font-semibold tracking-tight mb-2"
               >
                 Publish Website
-              </h2>
+              </h4>
               <p class="text-white/50 text-sm mb-1">Updated on Jun 9, 2025</p>
               <p class="text-white/50 text-sm mb-6 tracking-widest">v1.0.0</p>
 
@@ -389,7 +386,7 @@
           <a
             target="_blank"
             href="https://kartikeyalab.github.io/PortfolioBuilder/"
-            class="glow-card relative rounded-[2.5rem] p-10 border border-white/10 backdrop-blur-2xl overflow-hidden transition-all duration-300 transform hover:scale-[1.015] bg-white/5"
+            class="glow-card relative rounded-[2.5rem] p-10 border border-white/10 bg-white/5 backdrop-blur-2xl backdrop-saturate-90 overflow-hidden transition-all duration-300 transform hover:scale-[1.015] ring-1 ring-inset ring-white/5"
           >
             <div class="absolute top-6 right-6 z-10">
               <span
@@ -400,11 +397,11 @@
             </div>
 
             <div class="relative z-10">
-              <h2
+              <h4
                 class="text-white text-3xl sm:text-4xl font-semibold tracking-tight mb-2"
               >
                 Website Builder
-              </h2>
+              </h4>
 
               <p class="text-white/50 text-sm mb-1">Updated on Jun 9, 2025</p>
               <p class="text-white/50 text-sm mb-6 tracking-widest">v2.0.0</p>
@@ -439,9 +436,8 @@
           I’m in 11th grade and, not gonna lie, I probably spend more time
           writing code than actually studying. I *mostly work on front-end
           development—HTML, CSS (Flexbox and Grid, even when they confuse me),
-          JavaScript, and React(almost). I like building stuff that looks cool,
-          works well, and occasionally makes me say, Wait… why is this actually
-          working?
+          JavaScript. I like building stuff that looks cool, works well, and
+          occasionally makes me say, Wait… why is this actually working?
         </p>
 
         <p
@@ -473,7 +469,7 @@
         >
           I’m still learning, experimenting, and messing up sometimes, but I
           really enjoy the process. Thanks for being here, it honestly means a
-          lot. :)
+          lot. (^-^)
         </p>
       </section>
 
@@ -514,15 +510,27 @@
               <a
                 href="https://www.youtube.com/watch?v=9qNmzuuOLKQ"
                 target="_blank"
-                class="absolute bottom-4 right-4 z-20 bg-white/10 backdrop-blur-md rounded-full p-3 border border-white/20 hover:scale-110 transition-transform"
+                aria-label="Watch on YouTube"
+                class="absolute bottom-4 right-4 z-20 p-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl backdrop-saturate-200 transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 overflow-hidden ring-1 ring-inset ring-white/5"
               >
-                <svg
-                  class="w-5 h-5 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+                <div class="flex items-center justify-center w-6 h-6 relative">
+                  <!-- Refined rounded triangle play icon -->
+                  <svg
+                    class="w-6 h-6 text-white/90"
+                    viewBox="0 0 48 48"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 14C18 12.8954 19.2222 12.2679 20.1111 12.8889L33.7778 22.8889C34.5556 23.4444 34.5556 24.5556 33.7778 25.1111L20.1111 35.1111C19.2222 35.7321 18 35.1046 18 34V14Z"
+                    />
+                  </svg>
+
+                  <!-- Inner shimmer ring for depth -->
+                  <span
+                    class="absolute inset-0 rounded-full border border-white/10 blur-sm opacity-25 pointer-events-none"
+                  ></span>
+                </div>
               </a>
             </div>
             <div class="p-6 text-left space-y-2">
@@ -579,18 +587,31 @@
                   class="absolute inset-0 bg-gradient-to-tr from-black/30 via-black/10 to-transparent z-10 pointer-events-none rounded-t-[2rem]"
                 ></div>
               </a>
+
               <a
                 href="https://www.youtube.com/watch?v=DV86FQ-rjdE"
                 target="_blank"
-                class="absolute bottom-4 right-4 z-20 bg-white/10 backdrop-blur-md rounded-full p-3 border border-white/20 hover:scale-110 transition-transform"
+                aria-label="Watch on YouTube"
+                class="absolute bottom-4 right-4 z-20 p-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl backdrop-saturate-200 transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 overflow-hidden ring-1 ring-inset ring-white/5"
               >
-                <svg
-                  class="w-5 h-5 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+                <div class="flex items-center justify-center w-6 h-6 relative">
+                  <!-- Refined rounded triangle play icon -->
+                  <svg
+                    class="w-6 h-6 text-white/90"
+                    viewBox="0 0 48 48"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 14C18 12.8954 19.2222 12.2679 20.1111 12.8889L33.7778 22.8889C34.5556 23.4444 34.5556 24.5556 33.7778 25.1111L20.1111 35.1111C19.2222 35.7321 18 35.1046 18 34V14Z"
+                    />
+                  </svg>
+
+                  <!-- Inner shimmer ring for depth -->
+                  <span
+                    class="absolute inset-0 rounded-full border border-white/10 blur-sm opacity-25 pointer-events-none"
+                  ></span>
+                </div>
               </a>
             </div>
             <div class="p-6 text-left space-y-2">
@@ -643,18 +664,31 @@
                   class="absolute inset-0 bg-gradient-to-tr from-black/30 via-black/10 to-transparent z-10 pointer-events-none rounded-t-[2rem]"
                 ></div>
               </a>
+
               <a
                 href="https://www.youtube.com/watch?v=ezG4lemvy50"
                 target="_blank"
-                class="absolute bottom-4 right-4 z-20 bg-white/10 backdrop-blur-md rounded-full p-3 border border-white/20 hover:scale-110 transition-transform"
+                aria-label="Watch on YouTube"
+                class="absolute bottom-4 right-4 z-20 p-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl backdrop-saturate-200 transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 overflow-hidden ring-1 ring-inset ring-white/5"
               >
-                <svg
-                  class="w-5 h-5 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+                <div class="flex items-center justify-center w-6 h-6 relative">
+                  <!-- Refined rounded triangle play icon -->
+                  <svg
+                    class="w-6 h-6 text-white/90"
+                    viewBox="0 0 48 48"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 14C18 12.8954 19.2222 12.2679 20.1111 12.8889L33.7778 22.8889C34.5556 23.4444 34.5556 24.5556 33.7778 25.1111L20.1111 35.1111C19.2222 35.7321 18 35.1046 18 34V14Z"
+                    />
+                  </svg>
+
+                  <!-- Inner shimmer ring for depth -->
+                  <span
+                    class="absolute inset-0 rounded-full border border-white/10 blur-sm opacity-25 pointer-events-none"
+                  ></span>
+                </div>
               </a>
             </div>
             <div class="p-6 text-left space-y-2">
@@ -737,6 +771,10 @@
             <p class="text-zinc-500 text-xs mb-4">Published: May 18, 2025</p>
 
             <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
+                >Python</span
+              >
               <span
                 class="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/90 backdrop-blur-sm"
                 >HTML</span
@@ -4351,7 +4389,7 @@
           Wanna talk?
         </h3>
         <p class="dim_text text-center mb-10 text-sm sm:text-base">
-          Wanna chat? Drop a message. I’m 83.2% friendly.
+          Wanna talk? Drop a message. I’m 83.2% friendly.
         </p>
 
         <div class="max-w-[60rem] mx-auto px-1">
@@ -4502,16 +4540,17 @@
           release.
         </p>
         <div
-          class="w-full max-w-4xl mx-auto text-left bg-white/5 border border-white/10 rounded-[2rem] p-8 backdrop-blur-lg shadow-lg"
+          class="glow-card w-full max-w-4xl mx-auto text-left bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 backdrop-blur-lg shadow-lg"
         >
           <!-- Header -->
-          <div class="mb-6">
-            <div class="flex items-center gap-3 flex-wrap">
+          <div class="mb-8">
+            <div class="flex flex-wrap items-center gap-3">
               <span class="text-xl sm:text-2xl font-semibold text-white">
-                Release <span class="text-blue-400">v3.1.0</span> (Frosted Edge)
+                Release <span class="text-blue-400">v3.1.1</span>
+                <span class="text-zinc-400">Frosted Edge</span>
               </span>
               <span
-                class="text-xs bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full font-medium border border-blue-300/20"
+                class="text-xs bg-white/10 text-white px-2.5 py-0.5 rounded-full font-medium border border-white/20"
               >
                 Latest
               </span>
@@ -4519,44 +4558,70 @@
             <p class="text-sm text-zinc-400 mt-1">Published on June 13, 2025</p>
           </div>
 
-          <div class="space-y-6 text-sm text-zinc-300">
-            <div>
-              <h5 class="font-semibold text-white mb-2">New</h5>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Added version history page for transparency</li>
-                <li>Introduced dedicated "Updates" section</li>
-                <li>UI overhaul with glassmorphism effects</li>
+          <!-- Sections -->
+          <div
+            class="space-y-10 text-sm sm:text-[15px] leading-relaxed text-zinc-300"
+          >
+            <!-- New -->
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                New
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>– Version history page added for full transparency</li>
+                <li>– Introduced dedicated “Updates” section</li>
+                <li>
+                  – Applied subtle glassmorphism effects to key components
+                </li>
               </ul>
-            </div>
+            </section>
 
-            <div>
-              <h5 class="font-semibold text-white mb-2">Improvements</h5>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Refined font sizing for better readability</li>
-                <li>Redesigned all project cards with subtle shadows</li>
-                <li>Revamped contact form with minimalistic spacing</li>
-                <li>Improved hover and tap animations for interactivity</li>
-                <li>Updated YouTube thumbnail display for consistency</li>
+            <!-- Improvements -->
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                Improvements
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>– Refined typography scale for improved readability</li>
+                <li>
+                  – Redesigned project cards with consistent spacing and layout
+                </li>
+                <li>
+                  – Contact form layout cleaned with improved input spacing
+                </li>
+                <li>
+                  – Hover and tap animations made smoother across components
+                </li>
+                <li>– Updated video display for more uniform thumbnails</li>
+                <li>– Stability Improvements</li>
               </ul>
-            </div>
+            </section>
 
-            <div>
-              <h5 class="font-semibold text-white mb-2">
+            <!-- Mobile & Accessibility -->
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
                 Mobile & Accessibility
               </h5>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Enhanced mobile nav with blur and smooth layout</li>
-                <li>Fixed layout overlap issues on small screens</li>
+              <ul class="space-y-2 pl-2">
+                <li>– Enhanced mobile navigation with simplified layout</li>
+                <li>
+                  – Fixed overlapping and scaling issues on smaller devices
+                </li>
               </ul>
-            </div>
+            </section>
 
-            <div>
-              <h5 class="font-semibold text-white mb-2">Optimization</h5>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Optimized page structure and performance</li>
-                <li>Rewrote all content for personal tone</li>
+            <!-- Optimization -->
+            <section>
+              <h5 class="text-white font-medium mb-3 text-base sm:text-lg">
+                Optimization
+              </h5>
+              <ul class="space-y-2 pl-2">
+                <li>– Page structure improved for faster rendering</li>
+                <li>
+                  – All content rewritten with a more personal, clear tone
+                </li>
               </ul>
-            </div>
+            </section>
           </div>
         </div>
       </section>
@@ -4574,29 +4639,29 @@
         >
           <div class="w-full md:w-1/2">
             <h2
-              class="text-4xl md:text-4xl lg:text-5xl font-semibold tracking-normal"
+              class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-normal"
             >
               About Me
             </h2>
             <p class="text-zinc-400 text-base md:text-lg mt-4">
-              I’m a programmer and typist who enjoys turning ideas into websites
-              using HTML, CSS, JavaScript, and React. I also mess around with
-              Python, sometimes C (when I feel brave), and I edit videos
-              because… why not?
+              I’m a programmer and typist I enjoy turning ideas into websites
+              using HTML, CSS, JavaScript. I also mess around with Python,
+              sometimes C (when I feel brave), and I edit videos because… why
+              not?
             </p>
           </div>
 
           <div class="w-full md:w-1/2">
             <h2
-              class="text-4xl md:text-4xl lg:text-5xl font-semibold tracking-normal"
+              class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-normal"
             >
               Wanna talk?
             </h2>
             <p class="text-zinc-400 text-base md:text-lg mt-4">
-              Let’s build cool stuff together. Got an idea? Just wanna say hi?
-              I’m always up for new projects, collabs, or random late-night
-              brainstorms. Hit me up below—let’s make something awesome,
-              <a href="#contact" class="underline">contact</a>.
+              Got a cool idea? Just wanna talk? I’m always down for new
+              projects, collabs, or even random ideas. Let’s build something
+              awesome together—reach out now!
+              <a href="#contact" class="underline">Contact</a>.
             </p>
           </div>
         </div>
@@ -4606,12 +4671,13 @@
         >
           © <span id="year"></span> Kartikeya. All rights reserved.
           <span class="inline-block mx-2 text-zinc-500">|</span>
-          <span class="text-zinc-400"
+          <a class="text-zinc-400" href="#versiondetails"
             >Version
-            <strong class="font-medium text-zinc-400 tracking-widest"
-              >v3.1.0</strong
-            ></span
-          >
+
+            <span class="font-medium text-zinc-400 tracking-widest"
+              >v3.1.1</span
+            >
+          </a>
         </div>
       </footer>
     </div>
