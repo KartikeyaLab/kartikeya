@@ -7,13 +7,13 @@ This repository houses the code for my personal portfolio website, a space where
 
 ---
 
-## 🚀 Explore the Live Site
+## Explore the Live Site
 
 Dive into the live experience here: [Visit Portfolio](http://kartikeyalab.github.io/kartikeya)
 
 ---
 
-## 🌟 Key Highlights
+## Key Highlights
 
 This portfolio is crafted with care and includes:
 
@@ -25,7 +25,7 @@ This portfolio is crafted with care and includes:
 
 ---
 
-## 📜 Open Source & Your Possibilities
+## Open Source & Your Possibilities
 
 This project is released under an open-source license, encouraging learning and personal exploration.
 
@@ -34,11 +34,11 @@ Want to make it your own? Here's how:
 * **Fork & Personalize:** Feel free to create your own version and tailor it to your unique style.
 * **Give Credit Where It's Due:** If you use or adapt this template, please acknowledge its origin by linking back to this repository or my portfolio.
 
-> ⚠️ Important Note: While you're welcome to learn and build upon this, please respect the effort put into it. Plagiarism or reselling this code as your own is not permitted.
+> Important Note: While you're welcome to learn and build upon this, please respect the effort put into it. Plagiarism or reselling this code as your own is not permitted.
 
 ---
 
-## 🧑‍💻 Connect with the Creator
+## Connect with the Creator
 
 **Kartikeya Lab**
 
