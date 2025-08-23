@@ -44,5 +44,4 @@ Want to make it your own? Here's how:
 
 * [GitHub](https://github.com/kartikeyalab)
 * [My Portfolio](http://kartikeyalab.github.io/kartikeya)
-* [YouTube](https://www.youtube.com/@clever-ways)
 * [Portfolio Builder Tool](https://kartikeyalab.github.io/PortfolioBuilder/)
